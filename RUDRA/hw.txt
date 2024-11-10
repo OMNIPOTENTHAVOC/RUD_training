@@ -1,0 +1,11 @@
+HOMEWORK
+practice ssh
+practice git cmds using Linux
+Install Arduino IDE
+Huogh Circle Detection in OpenCV
+
+Use Arduino to blink 2 LEDs to blink at intervals of 2,3 seconds
+Fade an LED
+L298-N (motor driver)
+
+Read about I2C

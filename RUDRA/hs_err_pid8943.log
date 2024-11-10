@@ -1,0 +1,1857 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x000074ec75069cba, pid=8943, tid=0x000074ec74afc6c0
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_191-b12) (build 1.8.0_191-b12)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.191-b12 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# v  ~BufferBlob::jni_fast_GetLongField
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000074ec8c79c800):  JavaThread "AWT-XAWT" daemon [_thread_in_native, id=8980, stack(0x000074ec749fd000,0x000074ec74afd000)]
+
+siginfo: si_signo: 11 (SIGSEGV), si_code: 1 (SEGV_MAPERR), si_addr: 0x0000000000000000
+
+Registers:
+RAX=0x000074ec965883c0, RBX=0x000074ec8c79c9f8, RCX=0x0000000000000001, RDX=0x0000000000000042
+RSP=0x000074ec74afb7d8, RBP=0x000074ec74afb800, RSI=0x0000000000000000, RDI=0x000074ec8c79c9f8
+R8 =0x0000000000000320, R9 =0x0000000000000000, R10=0x0000000000000b40, R11=0x000074ec75ed10d8
+R12=0x000074eae0016b10, R13=0x0000000000000000, R14=0x000074ec6fc56b00, R15=0x000074ec8c79c800
+RIP=0x000074ec75069cba, EFLAGS=0x0000000000010246, CSGSFS=0x002b000000000033, ERR=0x0000000000000004
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x000074ec74afb7d8)
+0x000074ec74afb7d8:   000074ec6fa34b84 000074ec8bd503f0
+0x000074ec74afb7e8:   000074eae0016b10 0000000000000000
+0x000074ec74afb7f8:   000074ec74afb890 000074ec74afb830
+0x000074ec74afb808:   000074ec96f41c62 000074ec74afb840
+0x000074ec74afb818:   000074ec8bd503f0 0000000000000000
+0x000074ec74afb828:   000074ec74afb8c0 000074ec74afb840
+0x000074ec74afb838:   000074ec96f38f73 000074ec74afb850
+0x000074ec74afb848:   000074ec6fa2cfef 000074ec74afb8a0
+0x000074ec74afb858:   000074ec75ed1176 000074ec74afb8b0
+0x000074ec74afb868:   000074ec75a54cf6 0000000651b36dc8
+0x000074ec74afb878:   000074ec752c3a6c 0000000744d9e760
+0x000074ec74afb888:   000074ec75bd739c 0000000652411740
+0x000074ec74afb898:   000074ec8bd23690 000074ec74afb920
+0x000074ec74afb8a8:   000074ec75007a90 000074ec74afb920
+0x000074ec74afb8b8:   000074ec75007a90 0000000000000000
+0x000074ec74afb8c8:   000074ec75007dd0 000074eb880012d0
+0x000074ec74afb8d8:   0000000651b36dc8 000074ec74afb8e0
+0x000074ec74afb8e8:   000074ec8bd1d894 000074ec74afb968
+0x000074ec74afb8f8:   000074ec8bd35828 000074ec56080958
+0x000074ec74afb908:   000074ec8bd1d9d0 000074ec74afb8c0
+0x000074ec74afb918:   000074ec74afb960 000074ec74afb9b0
+0x000074ec74afb928:   000074ec750082bd 0000000000000000
+0x000074ec74afb938:   000000075000cfd8 0000000000000000
+0x000074ec74afb948:   0000000000000000 0000000000000000
+0x000074ec74afb958:   0000000651b36dc8 deaddeaf00000000
+0x000074ec74afb968:   0000000651b4c340 000074ec74afb970
+0x000074ec74afb978:   000074ec8bd1d6d5 000074ec74afb9c0
+0x000074ec74afb988:   000074ec8bd35828 0000000000000000
+0x000074ec74afb998:   000074ec8bd1d6e0 000074ec74afb960
+0x000074ec74afb9a8:   000074ec74afb9c0 000074ec74afba08
+0x000074ec74afb9b8:   000074ec75008302 0000000651b4c340
+0x000074ec74afb9c8:   000074ec74afb9c8 000074ec8b82e6cb 
+
+Instructions: (pc=0x000074ec75069cba)
+0x000074ec75069c9a:   00 00 00 00 00 00 44 8b 15 55 e2 55 21 4c 8b ce
+0x000074ec75069caa:   41 f6 c2 01 0f 85 2e 00 00 00 4d 33 ca 4d 33 ca
+0x000074ec75069cba:   4d 8b 09 4c 8b da 49 c1 eb 02 4b 8b 04 19 49 bb
+0x000074ec75069cca:   fc 7e 5c 96 ec 74 00 00 4c 33 d8 4c 33 d8 45 3b 
+
+Register to memory mapping:
+
+RAX=0x000074ec965883c0: <offset 0xf883c0> in /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/amd64/server/libjvm.so at 0x000074ec95600000
+RBX=0x000074ec8c79c9f8 is an unknown value
+RCX=0x0000000000000001 is an unknown value
+RDX=0x0000000000000042 is an unknown value
+RSP=0x000074ec74afb7d8 is pointing into the stack for thread: 0x000074ec8c79c800
+RBP=0x000074ec74afb800 is pointing into the stack for thread: 0x000074ec8c79c800
+RSI=0x0000000000000000 is an unknown value
+RDI=0x000074ec8c79c9f8 is an unknown value
+R8 =0x0000000000000320 is an unknown value
+R9 =0x0000000000000000 is an unknown value
+R10=0x0000000000000b40 is an unknown value
+R11=0x000074ec75ed10d8 is at entry_point+24 in (nmethod*)0x000074ec75ed0f50
+R12=0x000074eae0016b10 is an unknown value
+R13=0x0000000000000000 is an unknown value
+R14=0x000074ec6fc56b00: <offset 0x256b00> in /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/amd64/libawt_xawt.so at 0x000074ec6fa00000
+R15=0x000074ec8c79c800 is a thread
+
+
+Stack: [0x000074ec749fd000,0x000074ec74afd000],  sp=0x000074ec74afb7d8,  free space=1017k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+v  ~BufferBlob::jni_fast_GetLongField
+C  [libX11.so.6+0x6bc62]  _XimServerDestroy+0x52
+C  [libX11.so.6+0x62f73]
+C  [libawt_xawt.so+0x2cfef]  Java_sun_awt_X11_XlibWrapper_XFilterEvent+0xf
+J 5206  sun.awt.X11.XlibWrapper.XFilterEvent(JJ)Z (0 bytes) @ 0x000074ec75ed1176 [0x000074ec75ed10c0+0xb6]
+j  sun.awt.X11.XToolkit.run(Z)V+300
+j  sun.awt.X11.XToolkit.run()V+5
+j  java.lang.Thread.run()V+11
+v  ~StubRoutines::call_stub
+V  [libjvm.so+0x6852db]  JavaCalls::call_helper(JavaValue*, methodHandle*, JavaCallArguments*, Thread*)+0xddb
+V  [libjvm.so+0x682ba3]  JavaCalls::call_virtual(JavaValue*, KlassHandle, Symbol*, Symbol*, JavaCallArguments*, Thread*)+0x263
+V  [libjvm.so+0x683167]  JavaCalls::call_virtual(JavaValue*, Handle, KlassHandle, Symbol*, Symbol*, Thread*)+0x47
+V  [libjvm.so+0x6ef0ec]  thread_entry(JavaThread*, Thread*)+0x6c
+V  [libjvm.so+0xa76f9b]  JavaThread::thread_main_inner()+0xdb
+V  [libjvm.so+0xa7722f]  JavaThread::run()+0x25f
+V  [libjvm.so+0x909c92]  java_start(Thread*)+0x102
+C  [libc.so.6+0x9ca94]
+C  [libc.so.6+0x129c3c]
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+J 5206  sun.awt.X11.XlibWrapper.XFilterEvent(JJ)Z (0 bytes) @ 0x000074ec75ed1104 [0x000074ec75ed10c0+0x44]
+j  sun.awt.X11.XToolkit.run(Z)V+300
+j  sun.awt.X11.XToolkit.run()V+5
+j  java.lang.Thread.run()V+11
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x000074ec8c00c000 JavaThread "DestroyJavaVM" [_thread_blocked, id=8945, stack(0x000074ec96700000,0x000074ec96800000)]
+  0x000074ec8c5e8800 JavaThread "Timer-0" [_thread_in_native, id=9021, stack(0x000074ec5c000000,0x000074ec5c100000)]
+  0x000074ec8c594800 JavaThread "TimerQueue" daemon [_thread_blocked, id=9017, stack(0x000074ec5d200000,0x000074ec5d300000)]
+  0x000074ec8d035800 JavaThread "Batik CleanerThread" daemon [_thread_blocked, id=9014, stack(0x000074ec5de00000,0x000074ec5df00000)]
+  0x000074ec8cf17800 JavaThread "AWT-EventQueue-0" [_thread_blocked, id=9013, stack(0x000074ec5df00000,0x000074ec5e000000)]
+  0x000074ec8cf16800 JavaThread "AWT-Shutdown" [_thread_blocked, id=9012, stack(0x000074ec6f900000,0x000074ec6fa00000)]
+  0x000074eb60067000 JavaThread "JmDNS(fe80-0-0-0-2a11-dbd3-e5d9-24a2-wlp0s20f3.local.).State.Timer" [_thread_blocked, id=9011, stack(0x000074ec5e900000,0x000074ec5ea00000)]
+  0x000074eb60065000 JavaThread "JmDNS(fe80-0-0-0-2a11-dbd3-e5d9-24a2-wlp0s20f3.local.).Timer" daemon [_thread_blocked, id=9010, stack(0x000074ec5ea00000,0x000074ec5eb00000)]
+  0x000074eb6005c800 JavaThread "JmDNS(2401-4900-6332-789a-549c-bcd2-1861-a0eb-wlp0s20f3.local.).State.Timer" [_thread_blocked, id=9005, stack(0x000074ec64100000,0x000074ec64200000)]
+  0x000074eb6005a800 JavaThread "JmDNS(2401-4900-6332-789a-549c-bcd2-1861-a0eb-wlp0s20f3.local.).Timer" daemon [_thread_blocked, id=9004, stack(0x000074ec64d00000,0x000074ec64e00000)]
+  0x000074eb60057000 JavaThread "JmDNS(2401-4900-6332-789a-a2b1-b979-93d3-10f-wlp0s20f3.local.).State.Timer" [_thread_blocked, id=9002, stack(0x000074ec6c000000,0x000074ec6c100000)]
+  0x000074eb60055800 JavaThread "JmDNS(2401-4900-6332-789a-a2b1-b979-93d3-10f-wlp0s20f3.local.).Timer" daemon [_thread_blocked, id=9001, stack(0x000074ec6c100000,0x000074ec6c200000)]
+  0x000074eb60052000 JavaThread "JmDNS(2401-4900-633a-d11d-8fb1-8ea9-c5ef-b132-wlp0s20f3.local.).State.Timer" [_thread_blocked, id=8999, stack(0x000074ec6d500000,0x000074ec6d600000)]
+  0x000074eb60050800 JavaThread "JmDNS(2401-4900-633a-d11d-8fb1-8ea9-c5ef-b132-wlp0s20f3.local.).Timer" daemon [_thread_blocked, id=8998, stack(0x000074ec6df00000,0x000074ec6e000000)]
+  0x000074eb60049800 JavaThread "JmDNS(2401-4900-632d-a7e9-6d29-ba9e-d4ee-58ad-wlp0s20f3.local.).State.Timer" [_thread_blocked, id=8995, stack(0x000074ec6e700000,0x000074ec6e800000)]
+  0x000074eb60048800 JavaThread "JmDNS(2401-4900-632d-a7e9-6d29-ba9e-d4ee-58ad-wlp0s20f3.local.).Timer" daemon [_thread_blocked, id=8994, stack(0x000074ec6eb14000,0x000074ec6ec14000)]
+  0x000074eb6001c000 JavaThread "Multihomed mDNS.Timer" daemon [_thread_blocked, id=8992, stack(0x000074ec6fd25000,0x000074ec6fe25000)]
+  0x000074eb6c003000 JavaThread "cc.arduino.packages.discoverers.serial.SerialDiscovery" [_thread_blocked, id=8991, stack(0x000074ec6f800000,0x000074ec6f900000)]
+=>0x000074ec8c79c800 JavaThread "AWT-XAWT" daemon [_thread_in_native, id=8980, stack(0x000074ec749fd000,0x000074ec74afd000)]
+  0x000074ec8c78d000 JavaThread "Java2D Disposer" daemon [_thread_blocked, id=8979, stack(0x000074ec74afd000,0x000074ec74bfd000)]
+  0x000074ec8c3f5000 JavaThread "Service Thread" daemon [_thread_blocked, id=8975, stack(0x000074ec74cfe000,0x000074ec74dfe000)]
+  0x000074ec8c3f2000 JavaThread "C1 CompilerThread11" daemon [_thread_blocked, id=8974, stack(0x000074ec74dff000,0x000074ec74eff000)]
+  0x000074ec8c3ef800 JavaThread "C1 CompilerThread10" daemon [_thread_blocked, id=8973, stack(0x000074ec74f00000,0x000074ec75000000)]
+  0x000074ec8c3ed800 JavaThread "C1 CompilerThread9" daemon [_thread_blocked, id=8972, stack(0x000074ec880cd000,0x000074ec881cd000)]
+  0x000074ec8c3eb800 JavaThread "C1 CompilerThread8" daemon [_thread_blocked, id=8971, stack(0x000074ec881ce000,0x000074ec882ce000)]
+  0x000074ec8c3e9800 JavaThread "C2 CompilerThread7" daemon [_thread_blocked, id=8970, stack(0x000074ec882cf000,0x000074ec883cf000)]
+  0x000074ec8c3e7800 JavaThread "C2 CompilerThread6" daemon [_thread_blocked, id=8969, stack(0x000074ec883d0000,0x000074ec884d0000)]
+  0x000074ec8c3e5800 JavaThread "C2 CompilerThread5" daemon [_thread_blocked, id=8968, stack(0x000074ec884d1000,0x000074ec885d1000)]
+  0x000074ec8c3db000 JavaThread "C2 CompilerThread4" daemon [_thread_blocked, id=8967, stack(0x000074ec885d2000,0x000074ec886d2000)]
+  0x000074ec8c3d9000 JavaThread "C2 CompilerThread3" daemon [_thread_blocked, id=8966, stack(0x000074ec886d3000,0x000074ec887d3000)]
+  0x000074ec8c3d7000 JavaThread "C2 CompilerThread2" daemon [_thread_blocked, id=8965, stack(0x000074ec887d4000,0x000074ec888d4000)]
+  0x000074ec8c3d5000 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=8964, stack(0x000074ec888d5000,0x000074ec889d5000)]
+  0x000074ec8c3d2000 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=8963, stack(0x000074ec889d6000,0x000074ec88ad6000)]
+  0x000074ec8c3d1000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=8962, stack(0x000074ec88ad6000,0x000074ec88bd6000)]
+  0x000074ec8c39f000 JavaThread "Finalizer" daemon [_thread_blocked, id=8961, stack(0x000074ec88bd6000,0x000074ec88cd6000)]
+  0x000074ec8c39c800 JavaThread "Reference Handler" daemon [_thread_blocked, id=8960, stack(0x000074ec88cd6000,0x000074ec88dd6000)]
+
+Other Threads:
+  0x000074ec8c393000 VMThread [stack: 0x000074ec88dd7000,0x000074ec88ed7000] [id=8959]
+  0x000074ec8c3fa800 WatcherThread [stack: 0x000074ec74bfe000,0x000074ec74cfe000] [id=8976]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 183808K, used 42391K [0x0000000744580000, 0x0000000753780000, 0x00000007c0000000)
+  eden space 126976K, 7% used [0x0000000744580000,0x0000000744e6da28,0x000000074c180000)
+  from space 56832K, 58% used [0x0000000750000000,0x0000000752078440,0x0000000753780000)
+  to   space 60416K, 0% used [0x000000074c180000,0x000000074c180000,0x000000074fc80000)
+ ParOldGen       total 502272K, used 105936K [0x000000064d000000, 0x000000066ba80000, 0x0000000744580000)
+  object space 502272K, 21% used [0x000000064d000000,0x0000000653774218,0x000000066ba80000)
+ Metaspace       used 44577K, capacity 45514K, committed 45656K, reserved 1089536K
+  class space    used 5416K, capacity 5646K, committed 5720K, reserved 1048576K
+
+Card table byte_map: [0x000074ec91600000,0x000074ec92199000] byte_map_base: 0x000074ec8e398000
+
+Marking Bits: (ParMarkBitMap*) 0x000074ec965c6d40
+ Begin Bits: [0x000074ec39600000, 0x000074ec3f2c0000)
+ End Bits:   [0x000074ec3f2c0000, 0x000074ec44f80000)
+
+Polling page: 0x000074ec96e65000
+
+CodeCache: size=245760Kb used=27627Kb max_used=27632Kb free=218132Kb
+ bounds [0x000074ec75000000, 0x000074ec76b40000, 0x000074ec84000000]
+ total_blobs=8584 nmethods=7784 adapters=706
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 1972.709 Thread 0x000074ec8c3ed800 nmethod 10095 0x000074ec75e55f90 code [0x000074ec75e56120, 0x000074ec75e563c8]
+Event: 1972.711 Thread 0x000074ec8c3f2000 nmethod 10094 0x000074ec76b26b90 code [0x000074ec76b26f60, 0x000074ec76b28978]
+Event: 2022.392 Thread 0x000074ec8c3ef800 10096       3       sun.awt.X11.XWindowPeer::getNewLocation (179 bytes)
+Event: 2022.392 Thread 0x000074ec8c3ed800 10097       3       sun.awt.X11.XConfigureEvent::get_send_event (20 bytes)
+Event: 2022.392 Thread 0x000074ec8c3eb800 10098       3       sun.awt.X11.Native::getBool (13 bytes)
+Event: 2022.392 Thread 0x000074ec8c3f2000 10099   !   3       sun.awt.X11.XWindowPeer::checkIfOnNewScreen (290 bytes)
+Event: 2022.392 Thread 0x000074ec8c3eb800 nmethod 10098 0x000074ec7668bfd0 code [0x000074ec7668c140, 0x000074ec7668c350]
+Event: 2022.393 Thread 0x000074ec8c3ed800 nmethod 10097 0x000074ec75c59c10 code [0x000074ec75c59da0, 0x000074ec75c5a1a8]
+Event: 2022.395 Thread 0x000074ec8c3f2000 nmethod 10099 0x000074ec76b29c10 code [0x000074ec76b29fc0, 0x000074ec76b2bda8]
+Event: 2022.395 Thread 0x000074ec8c3ef800 nmethod 10096 0x000074ec76b2d150 code [0x000074ec76b2d5e0, 0x000074ec76b30068]
+
+GC Heap History (10 events):
+Event: 996.859 GC heap before
+{Heap before GC invocations=12 (full 2):
+ PSYoungGen      total 198144K, used 164015K [0x0000000744580000, 0x0000000754b80000, 0x00000007c0000000)
+  eden space 129536K, 100% used [0x0000000744580000,0x000000074c400000,0x000000074c400000)
+  from space 68608K, 50% used [0x000000074c400000,0x000000074e5abe08,0x0000000750700000)
+  to   space 67072K, 0% used [0x0000000750a00000,0x0000000750a00000,0x0000000754b80000)
+ ParOldGen       total 502272K, used 105890K [0x000000064d000000, 0x000000066ba80000, 0x0000000744580000)
+  object space 502272K, 21% used [0x000000064d000000,0x0000000653768a78,0x000000066ba80000)
+ Metaspace       used 44083K, capacity 45016K, committed 45400K, reserved 1089536K
+  class space    used 5404K, capacity 5611K, committed 5720K, reserved 1048576K
+Event: 996.864 GC heap after
+Heap after GC invocations=12 (full 2):
+ PSYoungGen      total 195072K, used 31488K [0x0000000744580000, 0x0000000754680000, 0x00000007c0000000)
+  eden space 133120K, 0% used [0x0000000744580000,0x0000000744580000,0x000000074c780000)
+  from space 61952K, 50% used [0x0000000750a00000,0x00000007528c00b8,0x0000000754680000)
+  to   space 65024K, 0% used [0x000000074c780000,0x000000074c780000,0x0000000750700000)
+ ParOldGen       total 502272K, used 105898K [0x000000064d000000, 0x000000066ba80000, 0x0000000744580000)
+  object space 502272K, 21% used [0x000000064d000000,0x000000065376aa78,0x000000066ba80000)
+ Metaspace       used 44083K, capacity 45016K, committed 45400K, reserved 1089536K
+  class space    used 5404K, capacity 5611K, committed 5720K, reserved 1048576K
+}
+Event: 1181.288 GC heap before
+{Heap before GC invocations=13 (full 2):
+ PSYoungGen      total 195072K, used 164608K [0x0000000744580000, 0x0000000754680000, 0x00000007c0000000)
+  eden space 133120K, 100% used [0x0000000744580000,0x000000074c780000,0x000000074c780000)
+  from space 61952K, 50% used [0x0000000750a00000,0x00000007528c00b8,0x0000000754680000)
+  to   space 65024K, 0% used [0x000000074c780000,0x000000074c780000,0x0000000750700000)
+ ParOldGen       total 502272K, used 105900K [0x000000064d000000, 0x000000066ba80000, 0x0000000744580000)
+  object space 502272K, 21% used [0x000000064d000000,0x000000065376b128,0x000000066ba80000)
+ Metaspace       used 44260K, capacity 45144K, committed 45400K, reserved 1089536K
+  class space    used 5406K, capacity 5611K, committed 5720K, reserved 1048576K
+Event: 1181.301 GC heap after
+Heap after GC invocations=13 (full 2):
+ PSYoungGen      total 167424K, used 35739K [0x0000000744580000, 0x0000000754400000, 0x00000007c0000000)
+  eden space 131584K, 0% used [0x0000000744580000,0x0000000744580000,0x000000074c600000)
+  from space 35840K, 99% used [0x000000074c780000,0x000000074ea66cb8,0x000000074ea80000)
+  to   space 64512K, 0% used [0x0000000750500000,0x0000000750500000,0x0000000754400000)
+ ParOldGen       total 502272K, used 105908K [0x000000064d000000, 0x000000066ba80000, 0x0000000744580000)
+  object space 502272K, 21% used [0x000000064d000000,0x000000065376d128,0x000000066ba80000)
+ Metaspace       used 44260K, capacity 45144K, committed 45400K, reserved 1089536K
+  class space    used 5406K, capacity 5611K, committed 5720K, reserved 1048576K
+}
+Event: 1437.213 GC heap before
+{Heap before GC invocations=14 (full 2):
+ PSYoungGen      total 167424K, used 167323K [0x0000000744580000, 0x0000000754400000, 0x00000007c0000000)
+  eden space 131584K, 100% used [0x0000000744580000,0x000000074c600000,0x000000074c600000)
+  from space 35840K, 99% used [0x000000074c780000,0x000000074ea66cb8,0x000000074ea80000)
+  to   space 64512K, 0% used [0x0000000750500000,0x0000000750500000,0x0000000754400000)
+ ParOldGen       total 502272K, used 105910K [0x000000064d000000, 0x000000066ba80000, 0x0000000744580000)
+  object space 502272K, 21% used [0x000000064d000000,0x000000065376db68,0x000000066ba80000)
+ Metaspace       used 44341K, capacity 45208K, committed 45400K, reserved 1089536K
+  class space    used 5406K, capacity 5611K, committed 5720K, reserved 1048576K
+Event: 1437.224 GC heap after
+Heap after GC invocations=14 (full 2):
+ PSYoungGen      total 189952K, used 33874K [0x0000000744580000, 0x0000000753f80000, 0x00000007c0000000)
+  eden space 130048K, 0% used [0x0000000744580000,0x0000000744580000,0x000000074c480000)
+  from space 59904K, 56% used [0x0000000750500000,0x00000007526148b8,0x0000000753f80000)
+  to   space 62976K, 0% used [0x000000074c480000,0x000000074c480000,0x0000000750200000)
+ ParOldGen       total 502272K, used 105918K [0x000000064d000000, 0x000000066ba80000, 0x0000000744580000)
+  object space 502272K, 21% used [0x000000064d000000,0x000000065376fb68,0x000000066ba80000)
+ Metaspace       used 44341K, capacity 45208K, committed 45400K, reserved 1089536K
+  class space    used 5406K, capacity 5611K, committed 5720K, reserved 1048576K
+}
+Event: 1661.198 GC heap before
+{Heap before GC invocations=15 (full 2):
+ PSYoungGen      total 189952K, used 163922K [0x0000000744580000, 0x0000000753f80000, 0x00000007c0000000)
+  eden space 130048K, 100% used [0x0000000744580000,0x000000074c480000,0x000000074c480000)
+  from space 59904K, 56% used [0x0000000750500000,0x00000007526148b8,0x0000000753f80000)
+  to   space 62976K, 0% used [0x000000074c480000,0x000000074c480000,0x0000000750200000)
+ ParOldGen       total 502272K, used 105920K [0x000000064d000000, 0x000000066ba80000, 0x0000000744580000)
+  object space 502272K, 21% used [0x000000064d000000,0x0000000653770218,0x000000066ba80000)
+ Metaspace       used 44461K, capacity 45412K, committed 45656K, reserved 1089536K
+  class space    used 5410K, capacity 5613K, committed 5720K, reserved 1048576K
+Event: 1661.211 GC heap after
+Heap after GC invocations=15 (full 2):
+ PSYoungGen      total 165376K, used 36750K [0x0000000744580000, 0x0000000753d00000, 0x00000007c0000000)
+  eden space 128512K, 0% used [0x0000000744580000,0x0000000744580000,0x000000074c300000)
+  from space 36864K, 99% used [0x000000074c480000,0x000000074e8639a0,0x000000074e880000)
+  to   space 62464K, 0% used [0x0000000750000000,0x0000000750000000,0x0000000753d00000)
+ ParOldGen       total 502272K, used 105928K [0x000000064d000000, 0x000000066ba80000, 0x0000000744580000)
+  object space 502272K, 21% used [0x000000064d000000,0x0000000653772218,0x000000066ba80000)
+ Metaspace       used 44461K, capacity 45412K, committed 45656K, reserved 1089536K
+  class space    used 5410K, capacity 5613K, committed 5720K, reserved 1048576K
+}
+Event: 1947.399 GC heap before
+{Heap before GC invocations=16 (full 2):
+ PSYoungGen      total 165376K, used 165262K [0x0000000744580000, 0x0000000753d00000, 0x00000007c0000000)
+  eden space 128512K, 100% used [0x0000000744580000,0x000000074c300000,0x000000074c300000)
+  from space 36864K, 99% used [0x000000074c480000,0x000000074e8639a0,0x000000074e880000)
+  to   space 62464K, 0% used [0x0000000750000000,0x0000000750000000,0x0000000753d00000)
+ ParOldGen       total 502272K, used 105928K [0x000000064d000000, 0x000000066ba80000, 0x0000000744580000)
+  object space 502272K, 21% used [0x000000064d000000,0x0000000653772218,0x000000066ba80000)
+ Metaspace       used 44542K, capacity 45482K, committed 45656K, reserved 1089536K
+  class space    used 5413K, capacity 5614K, committed 5720K, reserved 1048576K
+Event: 1947.411 GC heap after
+Heap after GC invocations=16 (full 2):
+ PSYoungGen      total 183808K, used 33249K [0x0000000744580000, 0x0000000753780000, 0x00000007c0000000)
+  eden space 126976K, 0% used [0x0000000744580000,0x0000000744580000,0x000000074c180000)
+  from space 56832K, 58% used [0x0000000750000000,0x0000000752078440,0x0000000753780000)
+  to   space 60416K, 0% used [0x000000074c180000,0x000000074c180000,0x000000074fc80000)
+ ParOldGen       total 502272K, used 105936K [0x000000064d000000, 0x000000066ba80000, 0x0000000744580000)
+  object space 502272K, 21% used [0x000000064d000000,0x0000000653774218,0x000000066ba80000)
+ Metaspace       used 44542K, capacity 45482K, committed 45656K, reserved 1089536K
+  class space    used 5413K, capacity 5614K, committed 5720K, reserved 1048576K
+}
+
+Deoptimization events (10 events):
+Event: 1623.928 Thread 0x000074ec8cf17800 Uncommon trap: reason=class_check action=maybe_recompile pc=0x000074ec765b795c method=java.awt.KeyboardFocusManager.clearMostRecentFocusOwner(Ljava/awt/Component;)V @ 67
+Event: 1650.583 Thread 0x000074ec8cf17800 Uncommon trap: reason=class_check action=maybe_recompile pc=0x000074ec76957af4 method=java.awt.Component.dispatchEventImpl(Ljava/awt/AWTEvent;)V @ 409
+Event: 1928.378 Thread 0x000074ec8cf17800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x000074ec75fb3750 method=javax.swing.RepaintManager.addDirtyRegion0(Ljava/awt/Container;IIII)V @ 108
+Event: 1938.099 Thread 0x000074eb6005e000 Uncommon trap: reason=unloaded action=reinterpret pc=0x000074ec7685b3f0 method=javax.jmdns.impl.DNSIncoming.readAnswer(Ljava/net/InetAddress;)Ljavax/jmdns/impl/DNSRecord; @ 277
+Event: 1938.099 Thread 0x000074eb6005e000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x000074ec76525a00 method=javax.jmdns.impl.ServiceInfoImpl.decodeQualifiedNameMapForType(Ljava/lang/String;)Ljava/util/Map; @ 41
+Event: 1938.099 Thread 0x000074eb6005e000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x000074ec768b4c14 method=javax.jmdns.impl.JmDNSImpl.aRecordsLast(Ljava/util/List;)Ljava/util/List; @ 77
+Event: 1938.561 Thread 0x000074ec8cf17800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x000074ec75e93104 method=javax.swing.RepaintManager.addDirtyRegion0(Ljava/awt/Container;IIII)V @ 108
+Event: 1942.398 Thread 0x000074eb60049800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x000074ec75bc5e34 method=org.slf4j.impl.SimpleLogger.isLevelEnabled(I)Z @ 5
+Event: 1943.062 Thread 0x000074ec8c79c800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x000074ec76b03f48 method=sun.awt.X11.XToolkit.run(Z)V @ 132
+Event: 2027.374 Thread 0x000074ec8cf17800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x000074ec76b0f194 method=java.awt.Component.dispatchEventImpl(Ljava/awt/AWTEvent;)V @ 759
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (10 events):
+Event: 1948.523 Thread 0x000074eb1c002800 Exception <a 'java/io/IOException'> (0x0000000744694328) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u191/11894/hotspot/src/share/vm/prims/jni.cpp, line 709]
+Event: 1948.523 Thread 0x000074eb1c002800 Exception <a 'java/io/IOException'> (0x0000000744694590) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u191/11894/hotspot/src/share/vm/prims/jni.cpp, line 709]
+Event: 1948.624 Thread 0x000074eae8006800 Exception <a 'java/io/IOException'> (0x00000007446c9310) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u191/11894/hotspot/src/share/vm/prims/jni.cpp, line 709]
+Event: 1948.624 Thread 0x000074eae8006800 Exception <a 'java/io/IOException'> (0x00000007446c95a8) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u191/11894/hotspot/src/share/vm/prims/jni.cpp, line 709]
+Event: 1948.624 Thread 0x000074eae8006800 Exception <a 'java/io/IOException'> (0x00000007446c9810) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u191/11894/hotspot/src/share/vm/prims/jni.cpp, line 709]
+Event: 1948.624 Thread 0x000074eae8006800 Exception <a 'java/io/IOException'> (0x00000007446c9a78) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u191/11894/hotspot/src/share/vm/prims/jni.cpp, line 709]
+Event: 1948.624 Thread 0x000074eb0c001000 Exception <a 'java/io/IOException'> (0x00000007446d4720) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u191/11894/hotspot/src/share/vm/prims/jni.cpp, line 709]
+Event: 1948.624 Thread 0x000074eb0c001000 Exception <a 'java/io/IOException'> (0x00000007446d49b8) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u191/11894/hotspot/src/share/vm/prims/jni.cpp, line 709]
+Event: 1948.624 Thread 0x000074eb0c001000 Exception <a 'java/io/IOException'> (0x00000007446d4c20) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u191/11894/hotspot/src/share/vm/prims/jni.cpp, line 709]
+Event: 1948.624 Thread 0x000074eb0c001000 Exception <a 'java/io/IOException'> (0x00000007446d4e88) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u191/11894/hotspot/src/share/vm/prims/jni.cpp, line 709]
+
+Events (10 events):
+Event: 2022.395 Thread 0x000074ec8c3f2000 flushing nmethod 0x000074ec75adc0d0
+Event: 2027.367 loading class java/awt/KeyboardFocusManager$2
+Event: 2027.367 loading class java/awt/KeyboardFocusManager$2 done
+Event: 2027.367 loading class sun/awt/SunToolkit$1
+Event: 2027.368 loading class sun/awt/SunToolkit$1 done
+Event: 2027.374 Thread 0x000074ec8cf17800 Uncommon trap: trap_request=0xffffff65 fr.pc=0x000074ec76b0f194
+Event: 2027.374 Thread 0x000074ec8cf17800 DEOPT PACKING pc=0x000074ec76b0f194 sp=0x000074ec5dffd1f0
+Event: 2027.374 Thread 0x000074ec8cf17800 DEOPT UNPACKING pc=0x000074ec7504573a sp=0x000074ec5dffd240 mode 2
+Event: 2038.127 loading class sun/awt/X11/XDestroyWindowEvent
+Event: 2038.127 loading class sun/awt/X11/XDestroyWindowEvent done
+
+
+Dynamic libraries:
+00400000-00401000 r-xp 00000000 103:06 1079699                           /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/bin/java
+00600000-00601000 r--p 00000000 103:06 1079699                           /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/bin/java
+00601000-00602000 rw-p 00001000 103:06 1079699                           /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/bin/java
+0097a000-009bc000 rw-p 00000000 00:00 0                                  [heap]
+64d000000-66ba80000 rw-p 00000000 00:00 0 
+66ba80000-744580000 ---p 00000000 00:00 0 
+744580000-753780000 rw-p 00000000 00:00 0 
+753780000-7c0000000 ---p 00000000 00:00 0 
+7c0000000-7c0596000 rw-p 00000000 00:00 0 
+7c0596000-800000000 ---p 00000000 00:00 0 
+74eaa0000000-74eaa0021000 rw-p 00000000 00:00 0 
+74eaa0021000-74eaa4000000 ---p 00000000 00:00 0 
+74eaa4000000-74eaa4021000 rw-p 00000000 00:00 0 
+74eaa4021000-74eaa8000000 ---p 00000000 00:00 0 
+74eaac000000-74eaac05b000 rw-p 00000000 00:00 0 
+74eaac05b000-74eab0000000 ---p 00000000 00:00 0 
+74eab0000000-74eab0037000 rw-p 00000000 00:00 0 
+74eab0037000-74eab4000000 ---p 00000000 00:00 0 
+74eab8000000-74eab8159000 rw-p 00000000 00:00 0 
+74eab8159000-74eabc000000 ---p 00000000 00:00 0 
+74eabc000000-74eabc021000 rw-p 00000000 00:00 0 
+74eabc021000-74eac0000000 ---p 00000000 00:00 0 
+74eac4000000-74eac4035000 rw-p 00000000 00:00 0 
+74eac4035000-74eac8000000 ---p 00000000 00:00 0 
+74eac8000000-74eac8021000 rw-p 00000000 00:00 0 
+74eac8021000-74eacc000000 ---p 00000000 00:00 0 
+74ead0000000-74ead0068000 rw-p 00000000 00:00 0 
+74ead0068000-74ead4000000 ---p 00000000 00:00 0 
+74ead4000000-74ead406d000 rw-p 00000000 00:00 0 
+74ead406d000-74ead8000000 ---p 00000000 00:00 0 
+74eadc000000-74eadc021000 rw-p 00000000 00:00 0 
+74eadc021000-74eae0000000 ---p 00000000 00:00 0 
+74eae0000000-74eae0851000 rw-p 00000000 00:00 0 
+74eae0851000-74eae4000000 ---p 00000000 00:00 0 
+74eae8000000-74eae8021000 rw-p 00000000 00:00 0 
+74eae8021000-74eaec000000 ---p 00000000 00:00 0 
+74eaec000000-74eaec021000 rw-p 00000000 00:00 0 
+74eaec021000-74eaf0000000 ---p 00000000 00:00 0 
+74eaf4000000-74eaf4021000 rw-p 00000000 00:00 0 
+74eaf4021000-74eaf8000000 ---p 00000000 00:00 0 
+74eaf8000000-74eaf8021000 rw-p 00000000 00:00 0 
+74eaf8021000-74eafc000000 ---p 00000000 00:00 0 
+74eb00000000-74eb00021000 rw-p 00000000 00:00 0 
+74eb00021000-74eb04000000 ---p 00000000 00:00 0 
+74eb04000000-74eb04021000 rw-p 00000000 00:00 0 
+74eb04021000-74eb08000000 ---p 00000000 00:00 0 
+74eb0c000000-74eb0c021000 rw-p 00000000 00:00 0 
+74eb0c021000-74eb10000000 ---p 00000000 00:00 0 
+74eb10000000-74eb10021000 rw-p 00000000 00:00 0 
+74eb10021000-74eb14000000 ---p 00000000 00:00 0 
+74eb18000000-74eb18021000 rw-p 00000000 00:00 0 
+74eb18021000-74eb1c000000 ---p 00000000 00:00 0 
+74eb1c000000-74eb1c021000 rw-p 00000000 00:00 0 
+74eb1c021000-74eb20000000 ---p 00000000 00:00 0 
+74eb24000000-74eb24021000 rw-p 00000000 00:00 0 
+74eb24021000-74eb28000000 ---p 00000000 00:00 0 
+74eb28000000-74eb28021000 rw-p 00000000 00:00 0 
+74eb28021000-74eb2c000000 ---p 00000000 00:00 0 
+74eb30000000-74eb30021000 rw-p 00000000 00:00 0 
+74eb30021000-74eb34000000 ---p 00000000 00:00 0 
+74eb34000000-74eb34021000 rw-p 00000000 00:00 0 
+74eb34021000-74eb38000000 ---p 00000000 00:00 0 
+74eb3c000000-74eb3c021000 rw-p 00000000 00:00 0 
+74eb3c021000-74eb40000000 ---p 00000000 00:00 0 
+74eb40000000-74eb4005a000 rw-p 00000000 00:00 0 
+74eb4005a000-74eb44000000 ---p 00000000 00:00 0 
+74eb48000000-74eb48021000 rw-p 00000000 00:00 0 
+74eb48021000-74eb4c000000 ---p 00000000 00:00 0 
+74eb4c000000-74eb4c021000 rw-p 00000000 00:00 0 
+74eb4c021000-74eb50000000 ---p 00000000 00:00 0 
+74eb54000000-74eb54021000 rw-p 00000000 00:00 0 
+74eb54021000-74eb58000000 ---p 00000000 00:00 0 
+74eb58000000-74eb58021000 rw-p 00000000 00:00 0 
+74eb58021000-74eb5c000000 ---p 00000000 00:00 0 
+74eb60000000-74eb6006d000 rw-p 00000000 00:00 0 
+74eb6006d000-74eb64000000 ---p 00000000 00:00 0 
+74eb64000000-74eb640a9000 rw-p 00000000 00:00 0 
+74eb640a9000-74eb68000000 ---p 00000000 00:00 0 
+74eb6c000000-74eb6c021000 rw-p 00000000 00:00 0 
+74eb6c021000-74eb70000000 ---p 00000000 00:00 0 
+74eb70000000-74eb70021000 rw-p 00000000 00:00 0 
+74eb70021000-74eb74000000 ---p 00000000 00:00 0 
+74eb78000000-74eb78021000 rw-p 00000000 00:00 0 
+74eb78021000-74eb7c000000 ---p 00000000 00:00 0 
+74eb7c000000-74eb7c021000 rw-p 00000000 00:00 0 
+74eb7c021000-74eb80000000 ---p 00000000 00:00 0 
+74eb80000000-74eb8002e000 rw-p 00000000 00:00 0 
+74eb8002e000-74eb84000000 ---p 00000000 00:00 0 
+74eb88000000-74eb882d6000 rw-p 00000000 00:00 0 
+74eb882d6000-74eb8c000000 ---p 00000000 00:00 0 
+74eb8c000000-74eb8c021000 rw-p 00000000 00:00 0 
+74eb8c021000-74eb90000000 ---p 00000000 00:00 0 
+74eb94000000-74eb9456f000 rw-p 00000000 00:00 0 
+74eb9456f000-74eb98000000 ---p 00000000 00:00 0 
+74eb98000000-74eb98021000 rw-p 00000000 00:00 0 
+74eb98021000-74eb9c000000 ---p 00000000 00:00 0 
+74eba0000000-74eba0021000 rw-p 00000000 00:00 0 
+74eba0021000-74eba4000000 ---p 00000000 00:00 0 
+74eba4000000-74eba43ca000 rw-p 00000000 00:00 0 
+74eba43ca000-74eba8000000 ---p 00000000 00:00 0 
+74ebac000000-74ebac671000 rw-p 00000000 00:00 0 
+74ebac671000-74ebb0000000 ---p 00000000 00:00 0 
+74ebb0000000-74ebb08ad000 rw-p 00000000 00:00 0 
+74ebb08ad000-74ebb4000000 ---p 00000000 00:00 0 
+74ebb8000000-74ebb844e000 rw-p 00000000 00:00 0 
+74ebb844e000-74ebbc000000 ---p 00000000 00:00 0 
+74ebbc000000-74ebbe7db000 rw-p 00000000 00:00 0 
+74ebbe7db000-74ebc0000000 ---p 00000000 00:00 0 
+74ebc4000000-74ebc5ad4000 rw-p 00000000 00:00 0 
+74ebc5ad4000-74ebc8000000 ---p 00000000 00:00 0 
+74ebc8000000-74ebc8ed2000 rw-p 00000000 00:00 0 
+74ebc8ed2000-74ebcc000000 ---p 00000000 00:00 0 
+74ebd0000000-74ebd0f52000 rw-p 00000000 00:00 0 
+74ebd0f52000-74ebd4000000 ---p 00000000 00:00 0 
+74ebd4000000-74ebd4ead000 rw-p 00000000 00:00 0 
+74ebd4ead000-74ebd8000000 ---p 00000000 00:00 0 
+74ebdc000000-74ebdcad0000 rw-p 00000000 00:00 0 
+74ebdcad0000-74ebe0000000 ---p 00000000 00:00 0 
+74ebe0000000-74ebe10ef000 rw-p 00000000 00:00 0 
+74ebe10ef000-74ebe4000000 ---p 00000000 00:00 0 
+74ebe8000000-74ebe9288000 rw-p 00000000 00:00 0 
+74ebe9288000-74ebec000000 ---p 00000000 00:00 0 
+74ebec000000-74ebec021000 rw-p 00000000 00:00 0 
+74ebec021000-74ebf0000000 ---p 00000000 00:00 0 
+74ebf4000000-74ebf4021000 rw-p 00000000 00:00 0 
+74ebf4021000-74ebf8000000 ---p 00000000 00:00 0 
+74ebf8000000-74ebf8021000 rw-p 00000000 00:00 0 
+74ebf8021000-74ebfc000000 ---p 00000000 00:00 0 
+74ec00000000-74ec000aa000 rw-p 00000000 00:00 0 
+74ec000aa000-74ec04000000 ---p 00000000 00:00 0 
+74ec04000000-74ec04021000 rw-p 00000000 00:00 0 
+74ec04021000-74ec08000000 ---p 00000000 00:00 0 
+74ec0c000000-74ec0c021000 rw-p 00000000 00:00 0 
+74ec0c021000-74ec10000000 ---p 00000000 00:00 0 
+74ec14000000-74ec14021000 rw-p 00000000 00:00 0 
+74ec14021000-74ec18000000 ---p 00000000 00:00 0 
+74ec1c000000-74ec1c021000 rw-p 00000000 00:00 0 
+74ec1c021000-74ec20000000 ---p 00000000 00:00 0 
+74ec24000000-74ec24021000 rw-p 00000000 00:00 0 
+74ec24021000-74ec28000000 ---p 00000000 00:00 0 
+74ec2c000000-74ec2c021000 rw-p 00000000 00:00 0 
+74ec2c021000-74ec30000000 ---p 00000000 00:00 0 
+74ec34000000-74ec34021000 rw-p 00000000 00:00 0 
+74ec34021000-74ec38000000 ---p 00000000 00:00 0 
+74ec39600000-74ec44f80000 rw-p 00000000 00:00 0 
+74ec46c00000-74ec46c01000 ---p 00000000 00:00 0 
+74ec46c01000-74ec47401000 rw-p 00000000 00:00 0 
+74ec48000000-74ec48021000 rw-p 00000000 00:00 0 
+74ec48021000-74ec4c000000 ---p 00000000 00:00 0 
+74ec4d800000-74ec4d801000 ---p 00000000 00:00 0 
+74ec4d801000-74ec4e001000 rw-p 00000000 00:00 0 
+74ec4e200000-74ec4e201000 r--p 00000000 103:05 803645                    /usr/lib/x86_64-linux-gnu/libicudata.so.74.2
+74ec4e201000-74ec4e202000 r-xp 00001000 103:05 803645                    /usr/lib/x86_64-linux-gnu/libicudata.so.74.2
+74ec4e202000-74ec4ff5e000 r--p 00002000 103:05 803645                    /usr/lib/x86_64-linux-gnu/libicudata.so.74.2
+74ec4ff5e000-74ec4ff5f000 r--p 01d5d000 103:05 803645                    /usr/lib/x86_64-linux-gnu/libicudata.so.74.2
+74ec4ff5f000-74ec4ff60000 rw-p 01d5e000 103:05 803645                    /usr/lib/x86_64-linux-gnu/libicudata.so.74.2
+74ec50000000-74ec50021000 rw-p 00000000 00:00 0 
+74ec50021000-74ec54000000 ---p 00000000 00:00 0 
+74ec54800000-74ec54868000 r--p 00000000 103:05 803650                    /usr/lib/x86_64-linux-gnu/libicuuc.so.74.2
+74ec54868000-74ec5496d000 r-xp 00068000 103:05 803650                    /usr/lib/x86_64-linux-gnu/libicuuc.so.74.2
+74ec5496d000-74ec549f7000 r--p 0016d000 103:05 803650                    /usr/lib/x86_64-linux-gnu/libicuuc.so.74.2
+74ec549f7000-74ec54a0a000 r--p 001f7000 103:05 803650                    /usr/lib/x86_64-linux-gnu/libicuuc.so.74.2
+74ec54a0a000-74ec54a0b000 rw-p 0020a000 103:05 803650                    /usr/lib/x86_64-linux-gnu/libicuuc.so.74.2
+74ec54a0b000-74ec54a0d000 rw-p 00000000 00:00 0 
+74ec54c00000-74ec54cb7000 r--p 00000000 103:05 803906                    /usr/lib/x86_64-linux-gnu/librsvg-2.so.2.50.0
+74ec54cb7000-74ec5504e000 r-xp 000b7000 103:05 803906                    /usr/lib/x86_64-linux-gnu/librsvg-2.so.2.50.0
+74ec5504e000-74ec551e0000 r--p 0044e000 103:05 803906                    /usr/lib/x86_64-linux-gnu/librsvg-2.so.2.50.0
+74ec551e0000-74ec55277000 r--p 005e0000 103:05 803906                    /usr/lib/x86_64-linux-gnu/librsvg-2.so.2.50.0
+74ec55277000-74ec55278000 rw-p 00677000 103:05 803906                    /usr/lib/x86_64-linux-gnu/librsvg-2.so.2.50.0
+74ec55400000-74ec55401000 ---p 00000000 00:00 0 
+74ec55401000-74ec55c01000 rw-p 00000000 00:00 0 
+74ec56000000-74ec56100000 rw-p 00000000 00:00 0 
+74ec56100000-74ec56200000 ---p 00000000 00:00 0 
+74ec56200000-74ec56203000 r-xp 00000000 103:06 1315870                   /home/omnipotent-havoc/.jssc/linux/libjSSC-2.8_x86_64.so
+74ec56203000-74ec56402000 ---p 00003000 103:06 1315870                   /home/omnipotent-havoc/.jssc/linux/libjSSC-2.8_x86_64.so
+74ec56402000-74ec56403000 r--p 00002000 103:06 1315870                   /home/omnipotent-havoc/.jssc/linux/libjSSC-2.8_x86_64.so
+74ec56403000-74ec56404000 rw-p 00003000 103:06 1315870                   /home/omnipotent-havoc/.jssc/linux/libjSSC-2.8_x86_64.so
+74ec56600000-74ec56603000 ---p 00000000 00:00 0 
+74ec56603000-74ec56700000 rw-p 00000000 00:00 0 
+74ec56700000-74ec56703000 ---p 00000000 00:00 0 
+74ec56703000-74ec56800000 rw-p 00000000 00:00 0 
+74ec56800000-74ec569c0000 rw-p 00000000 00:00 0 
+74ec569c0000-74ec56c00000 rw-p 00000000 00:00 0 
+74ec56c00000-74ec56cb3000 r--p 00000000 103:05 794266                    /usr/lib/x86_64-linux-gnu/libcrypto.so.3
+74ec56cb3000-74ec56fe6000 r-xp 000b3000 103:05 794266                    /usr/lib/x86_64-linux-gnu/libcrypto.so.3
+74ec56fe6000-74ec570b1000 r--p 003e6000 103:05 794266                    /usr/lib/x86_64-linux-gnu/libcrypto.so.3
+74ec570b1000-74ec5710d000 r--p 004b0000 103:05 794266                    /usr/lib/x86_64-linux-gnu/libcrypto.so.3
+74ec5710d000-74ec57110000 rw-p 0050c000 103:05 794266                    /usr/lib/x86_64-linux-gnu/libcrypto.so.3
+74ec57110000-74ec57113000 rw-p 00000000 00:00 0 
+74ec57200000-74ec57400000 rw-p 00000000 00:00 0 
+74ec57400000-74ec57438000 r-xp 00000000 103:06 1068340                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/amd64/libsunec.so
+74ec57438000-74ec57637000 ---p 00038000 103:06 1068340                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/amd64/libsunec.so
+74ec57637000-74ec5763c000 r--p 00037000 103:06 1068340                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/amd64/libsunec.so
+74ec5763c000-74ec5763e000 rw-p 0003c000 103:06 1068340                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/amd64/libsunec.so
+74ec5764c000-74ec57754000 r--p 00000000 103:05 822785                    /usr/share/fonts/truetype/ubuntu/UbuntuSans[wdth,wght].ttf
+74ec5775c000-74ec5775f000 ---p 00000000 00:00 0 
+74ec5775f000-74ec5785c000 rw-p 00000000 00:00 0 
+74ec5785c000-74ec57894000 r--p 00000000 103:05 803822                    /usr/lib/x86_64-linux-gnu/libp11-kit.so.0.3.1
+74ec57894000-74ec57966000 r-xp 00038000 103:05 803822                    /usr/lib/x86_64-linux-gnu/libp11-kit.so.0.3.1
+74ec57966000-74ec579e5000 r--p 0010a000 103:05 803822                    /usr/lib/x86_64-linux-gnu/libp11-kit.so.0.3.1
+74ec579e5000-74ec579f2000 r--p 00188000 103:05 803822                    /usr/lib/x86_64-linux-gnu/libp11-kit.so.0.3.1
+74ec579f2000-74ec579ff000 rw-p 00195000 103:05 803822                    /usr/lib/x86_64-linux-gnu/libp11-kit.so.0.3.1
+74ec579ff000-74ec57a00000 rw-p 00000000 00:00 0 
+74ec57a00000-74ec57a2a000 r-xp 00000000 103:06 1068256                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/amd64/libdcpr.so
+74ec57a2a000-74ec57c29000 ---p 0002a000 103:06 1068256                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/amd64/libdcpr.so
+74ec57c29000-74ec57c2a000 r--p 00029000 103:06 1068256                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/amd64/libdcpr.so
+74ec57c2a000-74ec57c2d000 rw-p 0002a000 103:06 1068256                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/amd64/libdcpr.so
+74ec57d16000-74ec57d45000 r--p 00000000 103:05 804096                    /usr/lib/x86_64-linux-gnu/libxml2.so.2.9.14
+74ec57d45000-74ec57eab000 r-xp 0002f000 103:05 804096                    /usr/lib/x86_64-linux-gnu/libxml2.so.2.9.14
+74ec57eab000-74ec57eed000 r--p 00195000 103:05 804096                    /usr/lib/x86_64-linux-gnu/libxml2.so.2.9.14
+74ec57eed000-74ec57ef6000 r--p 001d6000 103:05 804096                    /usr/lib/x86_64-linux-gnu/libxml2.so.2.9.14
+74ec57ef6000-74ec57ef7000 rw-p 001df000 103:05 804096                    /usr/lib/x86_64-linux-gnu/libxml2.so.2.9.14
+74ec57ef7000-74ec57ef8000 rw-p 00000000 00:00 0 
+74ec57ef8000-74ec58000000 r--p 00000000 103:05 822785                    /usr/share/fonts/truetype/ubuntu/UbuntuSans[wdth,wght].ttf
+74ec58000000-74ec58021000 rw-p 00000000 00:00 0 
+74ec58021000-74ec5c003000 ---p 00000000 00:00 0 
+74ec5c003000-74ec5c100000 rw-p 00000000 00:00 0 
+74ec5c100000-74ec5c103000 ---p 00000000 00:00 0 
+74ec5c103000-74ec5c200000 rw-p 00000000 00:00 0 
+74ec5c200000-74ec5c3c0000 rw-p 00000000 00:00 0 
+74ec5c3c0000-74ec5c5c0000 rw-p 00000000 00:00 0 
+74ec5c5c0000-74ec5c7c0000 rw-p 00000000 00:00 0 
+74ec5c7c0000-74ec5ca00000 rw-p 00000000 00:00 0 
+74ec5ca00000-74ec5ca9d000 r--p 00000000 103:05 803966                    /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33
+74ec5ca9d000-74ec5cbdd000 r-xp 0009d000 103:05 803966                    /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33
+74ec5cbdd000-74ec5cc6b000 r--p 001dd000 103:05 803966                    /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33
+74ec5cc6b000-74ec5cc76000 r--p 0026b000 103:05 803966                    /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33
+74ec5cc76000-74ec5cc79000 rw-p 00276000 103:05 803966                    /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33
+74ec5cc79000-74ec5cc7d000 rw-p 00000000 00:00 0 
+74ec5cd00000-74ec5cd03000 ---p 00000000 00:00 0 
+74ec5cd03000-74ec5ce00000 rw-p 00000000 00:00 0 
+74ec5ce00000-74ec5ce3b000 r-xp 00000000 103:06 1049439                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/libastylej.so
+74ec5ce3b000-74ec5d03b000 ---p 0003b000 103:06 1049439                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/libastylej.so
+74ec5d03b000-74ec5d03c000 rw-p 0003b000 103:06 1049439                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/libastylej.so
+74ec5d03c000-74ec5d03d000 rw-p 00000000 00:00 0 
+74ec5d100000-74ec5d103000 ---p 00000000 00:00 0 
+74ec5d103000-74ec5d200000 rw-p 00000000 00:00 0 
+74ec5d200000-74ec5d203000 ---p 00000000 00:00 0 
+74ec5d203000-74ec5d300000 rw-p 00000000 00:00 0 
+74ec5d300000-74ec5d303000 ---p 00000000 00:00 0 
+74ec5d303000-74ec5d400000 rw-p 00000000 00:00 0 
+74ec5d400000-74ec5d5c0000 rw-p 00000000 00:00 0 
+74ec5d5c0000-74ec5d7c0000 rw-p 00000000 00:00 0 
+74ec5d7c0000-74ec5da00000 rw-p 00000000 00:00 0 
+74ec5da00000-74ec5da08000 r-xp 00000000 103:06 1068348                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/amd64/libmanagement.so
+74ec5da08000-74ec5dc08000 ---p 00008000 103:06 1068348                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/amd64/libmanagement.so
+74ec5dc08000-74ec5dc09000 r--p 00008000 103:06 1068348                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/amd64/libmanagement.so
+74ec5dc09000-74ec5dc0a000 rw-p 00009000 103:06 1068348                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/amd64/libmanagement.so
+74ec5dd00000-74ec5dd03000 ---p 00000000 00:00 0 
+74ec5dd03000-74ec5de00000 rw-p 00000000 00:00 0 
+74ec5de00000-74ec5de03000 ---p 00000000 00:00 0 
+74ec5de03000-74ec5df00000 rw-p 00000000 00:00 0 
+74ec5df00000-74ec5df03000 ---p 00000000 00:00 0 
+74ec5df03000-74ec5e000000 rw-p 00000000 00:00 0 
+74ec5e000000-74ec5e1c0000 rw-p 00000000 00:00 0 
+74ec5e1c0000-74ec5e3c0000 rw-p 00000000 00:00 0 
+74ec5e3c0000-74ec5e600000 rw-p 00000000 00:00 0 
+74ec5e600000-74ec5e66c000 r-xp 00000000 103:06 1068320                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/amd64/libt2k.so
+74ec5e66c000-74ec5e86c000 ---p 0006c000 103:06 1068320                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/amd64/libt2k.so
+74ec5e86c000-74ec5e872000 r--p 0006c000 103:06 1068320                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/amd64/libt2k.so
+74ec5e872000-74ec5e873000 rw-p 00072000 103:06 1068320                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/amd64/libt2k.so
+74ec5e900000-74ec5e903000 ---p 00000000 00:00 0 
+74ec5e903000-74ec5ea00000 rw-p 00000000 00:00 0 
+74ec5ea00000-74ec5ea03000 ---p 00000000 00:00 0 
+74ec5ea03000-74ec5eb00000 rw-p 00000000 00:00 0 
+74ec5eb00000-74ec5eb03000 ---p 00000000 00:00 0 
+74ec5eb03000-74ec5ec00000 rw-p 00000000 00:00 0 
+74ec5f500000-74ec5f503000 ---p 00000000 00:00 0 
+74ec5f503000-74ec5f600000 rw-p 00000000 00:00 0 
+74ec5f600000-74ec5f601000 ---p 00000000 00:00 0 
+74ec5f601000-74ec5fe01000 rw-p 00000000 00:00 0 
+74ec5ff00000-74ec5ff03000 ---p 00000000 00:00 0 
+74ec5ff03000-74ec60000000 rw-p 00000000 00:00 0 
+74ec60000000-74ec60021000 rw-p 00000000 00:00 0 
+74ec60021000-74ec64000000 ---p 00000000 00:00 0 
+74ec64000000-74ec64003000 ---p 00000000 00:00 0 
+74ec64003000-74ec64100000 rw-p 00000000 00:00 0 
+74ec64100000-74ec64103000 ---p 00000000 00:00 0 
+74ec64103000-74ec64200000 rw-p 00000000 00:00 0 
+74ec64200000-74ec64400000 rw-p 00000000 00:00 0 
+74ec64400000-74ec64401000 ---p 00000000 00:00 0 
+74ec64401000-74ec64c01000 rw-p 00000000 00:00 0 
+74ec64d00000-74ec64d03000 ---p 00000000 00:00 0 
+74ec64d03000-74ec64e00000 rw-p 00000000 00:00 0 
+74ec64e00000-74ec67e01000 rw-p 00000000 00:00 0 
+74ec67f00000-74ec67f03000 ---p 00000000 00:00 0 
+74ec67f03000-74ec68000000 rw-p 00000000 00:00 0 
+74ec68000000-74ec68021000 rw-p 00000000 00:00 0 
+74ec68021000-74ec6c003000 ---p 00000000 00:00 0 
+74ec6c003000-74ec6c100000 rw-p 00000000 00:00 0 
+74ec6c100000-74ec6c103000 ---p 00000000 00:00 0 
+74ec6c103000-74ec6c200000 rw-p 00000000 00:00 0 
+74ec6c200000-74ec6c201000 ---p 00000000 00:00 0 
+74ec6c201000-74ec6ca01000 rw-p 00000000 00:00 0 
+74ec6cb00000-74ec6cb03000 ---p 00000000 00:00 0 
+74ec6cb03000-74ec6cc00000 rw-p 00000000 00:00 0 
+74ec6cc00000-74ec6cc01000 ---p 00000000 00:00 0 
+74ec6cc01000-74ec6d401000 rw-p 00000000 00:00 0 
+74ec6d500000-74ec6d503000 ---p 00000000 00:00 0 
+74ec6d503000-74ec6d600000 rw-p 00000000 00:00 0 
+74ec6d600000-74ec6d601000 ---p 00000000 00:00 0 
+74ec6d601000-74ec6de01000 rw-p 00000000 00:00 0 
+74ec6df00000-74ec6df03000 ---p 00000000 00:00 0 
+74ec6df03000-74ec6e000000 rw-p 00000000 00:00 0 
+74ec6e000000-74ec6e200000 rw-p 00000000 00:00 0 
+74ec6e200000-74ec6e211000 r-xp 00000000 103:06 1068253                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/amd64/libnio.so
+74ec6e211000-74ec6e410000 ---p 00011000 103:06 1068253                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/amd64/libnio.so
+74ec6e410000-74ec6e411000 r--p 00010000 103:06 1068253                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/amd64/libnio.so
+74ec6e411000-74ec6e412000 rw-p 00011000 103:06 1068253                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/amd64/libnio.so
+74ec6e4a0000-74ec6e500000 rw-s 00000000 00:01 294933                     /SYSV00000000 (deleted)
+74ec6e500000-74ec6e503000 ---p 00000000 00:00 0 
+74ec6e503000-74ec6e600000 rw-p 00000000 00:00 0 
+74ec6e600000-74ec6e700000 rw-s 00000000 00:01 294940                     /SYSV00000000 (deleted)
+74ec6e700000-74ec6e703000 ---p 00000000 00:00 0 
+74ec6e703000-74ec6e800000 rw-p 00000000 00:00 0 
+74ec6e800000-74ec6e816000 r-xp 00000000 103:06 1067443                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/amd64/libnet.so
+74ec6e816000-74ec6ea15000 ---p 00016000 103:06 1067443                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/amd64/libnet.so
+74ec6ea15000-74ec6ea16000 r--p 00015000 103:06 1067443                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/amd64/libnet.so
+74ec6ea16000-74ec6ea17000 rw-p 00016000 103:06 1067443                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/amd64/libnet.so
+74ec6ea64000-74ec6ea67000 r--p 00000000 103:05 803717                    /usr/lib/x86_64-linux-gnu/liblzma.so.5.4.5
+74ec6ea67000-74ec6ea89000 r-xp 00003000 103:05 803717                    /usr/lib/x86_64-linux-gnu/liblzma.so.5.4.5
+74ec6ea89000-74ec6ea94000 r--p 00025000 103:05 803717                    /usr/lib/x86_64-linux-gnu/liblzma.so.5.4.5
+74ec6ea94000-74ec6ea95000 r--p 00030000 103:05 803717                    /usr/lib/x86_64-linux-gnu/liblzma.so.5.4.5
+74ec6ea95000-74ec6ea96000 rw-p 00031000 103:05 803717                    /usr/lib/x86_64-linux-gnu/liblzma.so.5.4.5
+74ec6ea96000-74ec6eae6000 r--p 00000000 103:05 932088                    /usr/share/icons/Humanity/icon-theme.cache
+74ec6eae6000-74ec6eb14000 r--p 00000000 103:05 944046                    /usr/share/icons/Yaru/icon-theme.cache
+74ec6eb14000-74ec6eb17000 ---p 00000000 00:00 0 
+74ec6eb17000-74ec6ec14000 rw-p 00000000 00:00 0 
+74ec6ec14000-74ec6ec17000 ---p 00000000 00:00 0 
+74ec6ec17000-74ec6ed14000 rw-p 00000000 00:00 0 
+74ec6ed14000-74ec6ed3c000 r--s 00000000 103:05 793725                    /usr/share/mime/mime.cache
+74ec6ed3c000-74ec6ed4e000 r--p 00000000 103:05 805478                    /usr/lib/x86_64-linux-gnu/gvfs/libgvfscommon.so
+74ec6ed4e000-74ec6ed6a000 r-xp 00012000 103:05 805478                    /usr/lib/x86_64-linux-gnu/gvfs/libgvfscommon.so
+74ec6ed6a000-74ec6ed76000 r--p 0002e000 103:05 805478                    /usr/lib/x86_64-linux-gnu/gvfs/libgvfscommon.so
+74ec6ed76000-74ec6ed7c000 r--p 00039000 103:05 805478                    /usr/lib/x86_64-linux-gnu/gvfs/libgvfscommon.so
+74ec6ed7c000-74ec6ed7d000 rw-p 0003f000 103:05 805478                    /usr/lib/x86_64-linux-gnu/gvfs/libgvfscommon.so
+74ec6ed7d000-74ec6ed8d000 r--p 00000000 103:05 803637                    /usr/lib/x86_64-linux-gnu/libibus-1.0.so.5.0.529
+74ec6ed8d000-74ec6edc5000 r-xp 00010000 103:05 803637                    /usr/lib/x86_64-linux-gnu/libibus-1.0.so.5.0.529
+74ec6edc5000-74ec6edfd000 r--p 00048000 103:05 803637                    /usr/lib/x86_64-linux-gnu/libibus-1.0.so.5.0.529
+74ec6edfd000-74ec6edff000 r--p 00080000 103:05 803637                    /usr/lib/x86_64-linux-gnu/libibus-1.0.so.5.0.529
+74ec6edff000-74ec6ee00000 rw-p 00082000 103:05 803637                    /usr/lib/x86_64-linux-gnu/libibus-1.0.so.5.0.529
+74ec6ee00000-74ec6ee64000 r--p 00000000 103:05 803612                    /usr/lib/x86_64-linux-gnu/libgtk-x11-2.0.so.0.2400.33
+74ec6ee64000-74ec6f10f000 r-xp 00064000 103:05 803612                    /usr/lib/x86_64-linux-gnu/libgtk-x11-2.0.so.0.2400.33
+74ec6f10f000-74ec6f262000 r--p 0030f000 103:05 803612                    /usr/lib/x86_64-linux-gnu/libgtk-x11-2.0.so.0.2400.33
+74ec6f262000-74ec6f269000 r--p 00462000 103:05 803612                    /usr/lib/x86_64-linux-gnu/libgtk-x11-2.0.so.0.2400.33
+74ec6f269000-74ec6f26d000 rw-p 00469000 103:05 803612                    /usr/lib/x86_64-linux-gnu/libgtk-x11-2.0.so.0.2400.33
+74ec6f26d000-74ec6f26f000 rw-p 00000000 00:00 0 
+74ec6f270000-74ec6f27a000 r--p 00000000 103:05 805159                    /usr/lib/x86_64-linux-gnu/gio/modules/libgvfsdbus.so
+74ec6f27a000-74ec6f298000 r-xp 0000a000 103:05 805159                    /usr/lib/x86_64-linux-gnu/gio/modules/libgvfsdbus.so
+74ec6f298000-74ec6f2a1000 r--p 00028000 103:05 805159                    /usr/lib/x86_64-linux-gnu/gio/modules/libgvfsdbus.so
+74ec6f2a1000-74ec6f2a3000 r--p 00030000 103:05 805159                    /usr/lib/x86_64-linux-gnu/gio/modules/libgvfsdbus.so
+74ec6f2a3000-74ec6f2a4000 rw-p 00032000 103:05 805159                    /usr/lib/x86_64-linux-gnu/gio/modules/libgvfsdbus.so
+74ec6f2a4000-74ec6f2f8000 r--p 00000000 103:05 822441                    /usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf
+74ec6f2f8000-74ec6f400000 r--p 00000000 103:05 822785                    /usr/share/fonts/truetype/ubuntu/UbuntuSans[wdth,wght].ttf
+74ec6f400000-74ec6f45d000 r-xp 00000000 103:06 1067909                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/amd64/libfontmanager.so
+74ec6f45d000-74ec6f65d000 ---p 0005d000 103:06 1067909                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/amd64/libfontmanager.so
+74ec6f65d000-74ec6f660000 r--p 0005d000 103:06 1067909                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/amd64/libfontmanager.so
+74ec6f660000-74ec6f661000 rw-p 00060000 103:06 1067909                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/amd64/libfontmanager.so
+74ec6f67f000-74ec6f682000 r--p 00000000 103:05 805438                    /usr/lib/x86_64-linux-gnu/gtk-2.0/2.10.0/immodules/im-ibus.so
+74ec6f682000-74ec6f686000 r-xp 00003000 103:05 805438                    /usr/lib/x86_64-linux-gnu/gtk-2.0/2.10.0/immodules/im-ibus.so
+74ec6f686000-74ec6f688000 r--p 00007000 103:05 805438                    /usr/lib/x86_64-linux-gnu/gtk-2.0/2.10.0/immodules/im-ibus.so
+74ec6f688000-74ec6f689000 r--p 00008000 103:05 805438                    /usr/lib/x86_64-linux-gnu/gtk-2.0/2.10.0/immodules/im-ibus.so
+74ec6f689000-74ec6f68a000 rw-p 00009000 103:05 805438                    /usr/lib/x86_64-linux-gnu/gtk-2.0/2.10.0/immodules/im-ibus.so
+74ec6f68a000-74ec6f792000 r--p 00000000 103:05 822785                    /usr/share/fonts/truetype/ubuntu/UbuntuSans[wdth,wght].ttf
+74ec6f7c7000-74ec6f7ca000 ---p 00000000 00:00 0 
+74ec6f7ca000-74ec6f800000 rw-p 00000000 00:00 0 
+74ec6f800000-74ec6f803000 ---p 00000000 00:00 0 
+74ec6f803000-74ec6f900000 rw-p 00000000 00:00 0 
+74ec6f900000-74ec6f903000 ---p 00000000 00:00 0 
+74ec6f903000-74ec6fa00000 rw-p 00000000 00:00 0 
+74ec6fa00000-74ec6fa53000 r-xp 00000000 103:06 1068307                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/amd64/libawt_xawt.so
+74ec6fa53000-74ec6fc52000 ---p 00053000 103:06 1068307                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/amd64/libawt_xawt.so
+74ec6fc52000-74ec6fc53000 r--p 00052000 103:06 1068307                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/amd64/libawt_xawt.so
+74ec6fc53000-74ec6fc56000 rw-p 00053000 103:06 1068307                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/amd64/libawt_xawt.so
+74ec6fc56000-74ec6fc57000 rw-p 00000000 00:00 0 
+74ec6fc73000-74ec6fc7a000 r--p 00000000 103:05 805158                    /usr/lib/x86_64-linux-gnu/gio/modules/libgioremote-volume-monitor.so
+74ec6fc7a000-74ec6fc86000 r-xp 00007000 103:05 805158                    /usr/lib/x86_64-linux-gnu/gio/modules/libgioremote-volume-monitor.so
+74ec6fc86000-74ec6fc8b000 r--p 00013000 103:05 805158                    /usr/lib/x86_64-linux-gnu/gio/modules/libgioremote-volume-monitor.so
+74ec6fc8b000-74ec6fc8f000 r--p 00017000 103:05 805158                    /usr/lib/x86_64-linux-gnu/gio/modules/libgioremote-volume-monitor.so
+74ec6fc8f000-74ec6fc90000 rw-p 0001b000 103:05 805158                    /usr/lib/x86_64-linux-gnu/gio/modules/libgioremote-volume-monitor.so
+74ec6fc90000-74ec6fcc5000 r--p 00000000 103:05 793714                    /usr/share/glib-2.0/schemas/gschemas.compiled
+74ec6fcc5000-74ec6fd25000 rw-s 00000000 00:01 229417                     /SYSV00000000 (deleted)
+74ec6fd25000-74ec6fd28000 ---p 00000000 00:00 0 
+74ec6fd28000-74ec6fe25000 rw-p 00000000 00:00 0 
+74ec6fe25000-74ec6fe80000 r--s 00000000 103:06 1049166                   /home/omnipotent-havoc/.cache/fontconfig/2300eef321c393bfd76478a5c0e95b23-le64.cache-9
+74ec6fe80000-74ec6fef2000 r--s 00000000 103:06 1049137                   /home/omnipotent-havoc/.cache/fontconfig/0bd3dc0958fa2205aaaa8ebb13e2872b-le64.cache-9
+74ec6ff08000-74ec6ff1b000 r--s 00345000 103:06 1066191                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/resources.jar
+74ec6ff1d000-74ec6ff21000 r--p 00000000 103:05 803380                    /usr/lib/x86_64-linux-gnu/libcairo-gobject.so.2.11800.0
+74ec6ff21000-74ec6ff23000 r-xp 00004000 103:05 803380                    /usr/lib/x86_64-linux-gnu/libcairo-gobject.so.2.11800.0
+74ec6ff23000-74ec6ff26000 r--p 00006000 103:05 803380                    /usr/lib/x86_64-linux-gnu/libcairo-gobject.so.2.11800.0
+74ec6ff26000-74ec6ff28000 r--p 00008000 103:05 803380                    /usr/lib/x86_64-linux-gnu/libcairo-gobject.so.2.11800.0
+74ec6ff28000-74ec6ff29000 rw-p 0000a000 103:05 803380                    /usr/lib/x86_64-linux-gnu/libcairo-gobject.so.2.11800.0
+74ec6ff29000-74ec6ff30000 r--p 00000000 103:05 954391                    /usr/share/icons/hicolor/icon-theme.cache
+74ec6ff30000-74ec6ff4b000 r--s 001d4000 103:06 1079804                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/ext/nashorn.jar
+74ec6ff4b000-74ec6ff59000 r--s 00000000 103:06 1049173                   /home/omnipotent-havoc/.cache/fontconfig/a4e60e8d1e10d2fdff3fe3037a1845fb-le64.cache-9
+74ec6ff5d000-74ec6ff67000 r--p 00000000 103:05 926041                    /usr/share/icons/Adwaita/icon-theme.cache
+74ec6ff67000-74ec6ff6f000 r--s 00000000 103:06 1049134                   /home/omnipotent-havoc/.cache/fontconfig/3047814df9a2f067bd2d96a2b9c36e5a-le64.cache-9
+74ec6ff6f000-74ec6ff86000 r--s 00000000 103:05 672855                    /var/cache/fontconfig/d52a8644073d54c13679302ca1180695-le64.cache-9
+74ec6ff86000-74ec6ff8b000 r--p 00000000 103:05 805433                    /usr/lib/x86_64-linux-gnu/gtk-2.0/2.10.0/engines/libmurrine.so
+74ec6ff8b000-74ec6ffbf000 r-xp 00005000 103:05 805433                    /usr/lib/x86_64-linux-gnu/gtk-2.0/2.10.0/engines/libmurrine.so
+74ec6ffbf000-74ec6ffc3000 r--p 00039000 103:05 805433                    /usr/lib/x86_64-linux-gnu/gtk-2.0/2.10.0/engines/libmurrine.so
+74ec6ffc3000-74ec6ffc4000 r--p 0003d000 103:05 805433                    /usr/lib/x86_64-linux-gnu/gtk-2.0/2.10.0/engines/libmurrine.so
+74ec6ffc4000-74ec6ffc5000 rw-p 0003e000 103:05 805433                    /usr/lib/x86_64-linux-gnu/gtk-2.0/2.10.0/engines/libmurrine.so
+74ec6ffc5000-74ec6ffcc000 r--p 00000000 103:05 803361                    /usr/lib/x86_64-linux-gnu/libblkid.so.1.1.0
+74ec6ffcc000-74ec6fff0000 r-xp 00007000 103:05 803361                    /usr/lib/x86_64-linux-gnu/libblkid.so.1.1.0
+74ec6fff0000-74ec6fff9000 r--p 0002b000 103:05 803361                    /usr/lib/x86_64-linux-gnu/libblkid.so.1.1.0
+74ec6fff9000-74ec6ffff000 r--p 00033000 103:05 803361                    /usr/lib/x86_64-linux-gnu/libblkid.so.1.1.0
+74ec6ffff000-74ec70000000 rw-p 00039000 103:05 803361                    /usr/lib/x86_64-linux-gnu/libblkid.so.1.1.0
+74ec70000000-74ec70021000 rw-p 00000000 00:00 0 
+74ec70021000-74ec74000000 ---p 00000000 00:00 0 
+74ec74001000-74ec74012000 r--s 00000000 103:06 1048708                   /home/omnipotent-havoc/.cache/fontconfig/9b89f8e3dae116d678bbf48e5f21f69b-le64.cache-9
+74ec74012000-74ec74013000 r--p 00000000 103:05 803369                    /usr/lib/x86_64-linux-gnu/libbrotlicommon.so.1.1.0
+74ec74013000-74ec74014000 r-xp 00001000 103:05 803369                    /usr/lib/x86_64-linux-gnu/libbrotlicommon.so.1.1.0
+74ec74014000-74ec74033000 r--p 00002000 103:05 803369                    /usr/lib/x86_64-linux-gnu/libbrotlicommon.so.1.1.0
+74ec74033000-74ec74034000 r--p 00021000 103:05 803369                    /usr/lib/x86_64-linux-gnu/libbrotlicommon.so.1.1.0
+74ec74034000-74ec74035000 rw-p 00022000 103:05 803369                    /usr/lib/x86_64-linux-gnu/libbrotlicommon.so.1.1.0
+74ec74035000-74ec74038000 r--p 00000000 103:05 803580                    /usr/lib/x86_64-linux-gnu/libgraphite2.so.3.2.1
+74ec74038000-74ec74055000 r-xp 00003000 103:05 803580                    /usr/lib/x86_64-linux-gnu/libgraphite2.so.3.2.1
+74ec74055000-74ec74058000 r--p 00020000 103:05 803580                    /usr/lib/x86_64-linux-gnu/libgraphite2.so.3.2.1
+74ec74058000-74ec7405a000 r--p 00022000 103:05 803580                    /usr/lib/x86_64-linux-gnu/libgraphite2.so.3.2.1
+74ec7405a000-74ec7405b000 rw-p 00024000 103:05 803580                    /usr/lib/x86_64-linux-gnu/libgraphite2.so.3.2.1
+74ec7405b000-74ec7405f000 r--p 00000000 103:05 794277                    /usr/lib/x86_64-linux-gnu/libexpat.so.1.9.1
+74ec7405f000-74ec7407b000 r-xp 00004000 103:05 794277                    /usr/lib/x86_64-linux-gnu/libexpat.so.1.9.1
+74ec7407b000-74ec74083000 r--p 00020000 103:05 794277                    /usr/lib/x86_64-linux-gnu/libexpat.so.1.9.1
+74ec74083000-74ec74085000 r--p 00027000 103:05 794277                    /usr/lib/x86_64-linux-gnu/libexpat.so.1.9.1
+74ec74085000-74ec74086000 rw-p 00029000 103:05 794277                    /usr/lib/x86_64-linux-gnu/libexpat.so.1.9.1
+74ec74086000-74ec74088000 r--p 00000000 103:05 803844                    /usr/lib/x86_64-linux-gnu/libpcre2-8.so.0.11.2
+74ec74088000-74ec740f6000 r-xp 00002000 103:05 803844                    /usr/lib/x86_64-linux-gnu/libpcre2-8.so.0.11.2
+74ec740f6000-74ec7411e000 r--p 00070000 103:05 803844                    /usr/lib/x86_64-linux-gnu/libpcre2-8.so.0.11.2
+74ec7411e000-74ec7411f000 r--p 00097000 103:05 803844                    /usr/lib/x86_64-linux-gnu/libpcre2-8.so.0.11.2
+74ec7411f000-74ec74120000 rw-p 00098000 103:05 803844                    /usr/lib/x86_64-linux-gnu/libpcre2-8.so.0.11.2
+74ec74120000-74ec74124000 r--p 00000000 103:05 803679                    /usr/lib/x86_64-linux-gnu/libjpeg.so.8.2.2
+74ec74124000-74ec74171000 r-xp 00004000 103:05 803679                    /usr/lib/x86_64-linux-gnu/libjpeg.so.8.2.2
+74ec74171000-74ec741a1000 r--p 00051000 103:05 803679                    /usr/lib/x86_64-linux-gnu/libjpeg.so.8.2.2
+74ec741a1000-74ec741a2000 r--p 00081000 103:05 803679                    /usr/lib/x86_64-linux-gnu/libjpeg.so.8.2.2
+74ec741a2000-74ec741a3000 rw-p 00082000 103:05 803679                    /usr/lib/x86_64-linux-gnu/libjpeg.so.8.2.2
+74ec741a3000-74ec741c1000 r--p 00000000 103:05 803551                    /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.8000.0
+74ec741c1000-74ec74261000 r-xp 0001e000 103:05 803551                    /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.8000.0
+74ec74261000-74ec742e9000 r--p 000be000 103:05 803551                    /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.8000.0
+74ec742e9000-74ec742ea000 r--p 00146000 103:05 803551                    /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.8000.0
+74ec742ea000-74ec742eb000 rw-p 00147000 103:05 803551                    /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.8000.0
+74ec742eb000-74ec742ec000 rw-p 00000000 00:00 0 
+74ec742ec000-74ec74325000 r--p 00000000 103:05 803546                    /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0.8000.0
+74ec74325000-74ec7443c000 r-xp 00039000 103:05 803546                    /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0.8000.0
+74ec7443c000-74ec744b1000 r--p 00150000 103:05 803546                    /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0.8000.0
+74ec744b1000-74ec744b9000 r--p 001c4000 103:05 803546                    /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0.8000.0
+74ec744b9000-74ec744ba000 rw-p 001cc000 103:05 803546                    /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0.8000.0
+74ec744ba000-74ec744bc000 rw-p 00000000 00:00 0 
+74ec744bc000-74ec744d0000 r--p 00000000 103:05 803382                    /usr/lib/x86_64-linux-gnu/libcairo.so.2.11800.0
+74ec744d0000-74ec745c1000 r-xp 00014000 103:05 803382                    /usr/lib/x86_64-linux-gnu/libcairo.so.2.11800.0
+74ec745c1000-74ec745f9000 r--p 00105000 103:05 803382                    /usr/lib/x86_64-linux-gnu/libcairo.so.2.11800.0
+74ec745f9000-74ec745fd000 r--p 0013d000 103:05 803382                    /usr/lib/x86_64-linux-gnu/libcairo.so.2.11800.0
+74ec745fd000-74ec745ff000 rw-p 00141000 103:05 803382                    /usr/lib/x86_64-linux-gnu/libcairo.so.2.11800.0
+74ec745ff000-74ec74600000 rw-p 00000000 00:00 0 
+74ec74600000-74ec7469f000 r-xp 00000000 103:06 1067567                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/amd64/libawt.so
+74ec7469f000-74ec7489f000 ---p 0009f000 103:06 1067567                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/amd64/libawt.so
+74ec7489f000-74ec748a0000 r--p 0009f000 103:06 1067567                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/amd64/libawt.so
+74ec748a0000-74ec748ab000 rw-p 000a0000 103:06 1067567                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/amd64/libawt.so
+74ec748ab000-74ec748d0000 rw-p 00000000 00:00 0 
+74ec748d6000-74ec748df000 r--s 00000000 103:05 672908                    /var/cache/fontconfig/bf3b770c553c462765856025a94f1ce6-le64.cache-9
+74ec748df000-74ec748f0000 r--s 00000000 103:06 1048612                   /home/omnipotent-havoc/.cache/fontconfig/e13b20fdb08344e0e664864cc2ede53d-le64.cache-9
+74ec748f0000-74ec748fb000 r--p 00000000 103:05 803627                    /usr/lib/x86_64-linux-gnu/libharfbuzz.so.0.60830.0
+74ec748fb000-74ec749c9000 r-xp 0000b000 103:05 803627                    /usr/lib/x86_64-linux-gnu/libharfbuzz.so.0.60830.0
+74ec749c9000-74ec749fb000 r--p 000d9000 103:05 803627                    /usr/lib/x86_64-linux-gnu/libharfbuzz.so.0.60830.0
+74ec749fb000-74ec749fc000 r--p 0010b000 103:05 803627                    /usr/lib/x86_64-linux-gnu/libharfbuzz.so.0.60830.0
+74ec749fc000-74ec749fd000 rw-p 0010c000 103:05 803627                    /usr/lib/x86_64-linux-gnu/libharfbuzz.so.0.60830.0
+74ec749fd000-74ec74a00000 ---p 00000000 00:00 0 
+74ec74a00000-74ec74afd000 rw-p 00000000 00:00 0 
+74ec74afd000-74ec74b00000 ---p 00000000 00:00 0 
+74ec74b00000-74ec74bfd000 rw-p 00000000 00:00 0 
+74ec74bfd000-74ec74bfe000 ---p 00000000 00:00 0 
+74ec74bfe000-74ec74cfe000 rw-p 00000000 00:00 0 
+74ec74cfe000-74ec74d01000 ---p 00000000 00:00 0 
+74ec74d01000-74ec74dfe000 rw-p 00000000 00:00 0 
+74ec74dfe000-74ec74dff000 ---p 00000000 00:00 0 
+74ec74dff000-74ec74e02000 ---p 00000000 00:00 0 
+74ec74e02000-74ec74eff000 rw-p 00000000 00:00 0 
+74ec74eff000-74ec74f00000 ---p 00000000 00:00 0 
+74ec74f00000-74ec74f03000 ---p 00000000 00:00 0 
+74ec74f03000-74ec75000000 rw-p 00000000 00:00 0 
+74ec75000000-74ec76b40000 rwxp 00000000 00:00 0 
+74ec76b40000-74ec84000000 ---p 00000000 00:00 0 
+74ec84000000-74ec84121000 rw-p 00000000 00:00 0 
+74ec84121000-74ec88000000 ---p 00000000 00:00 0 
+74ec88000000-74ec8800f000 r--s 00000000 103:06 1048737                   /home/omnipotent-havoc/.cache/fontconfig/6cc790b63b123a6a96ee260fcdad32a9-le64.cache-9
+74ec8800f000-74ec88010000 r--p 00000000 103:05 803370                    /usr/lib/x86_64-linux-gnu/libbrotlidec.so.1.1.0
+74ec88010000-74ec88018000 r-xp 00001000 103:05 803370                    /usr/lib/x86_64-linux-gnu/libbrotlidec.so.1.1.0
+74ec88018000-74ec8801b000 r--p 00009000 103:05 803370                    /usr/lib/x86_64-linux-gnu/libbrotlidec.so.1.1.0
+74ec8801b000-74ec8801c000 r--p 0000b000 103:05 803370                    /usr/lib/x86_64-linux-gnu/libbrotlidec.so.1.1.0
+74ec8801c000-74ec8801d000 rw-p 0000c000 103:05 803370                    /usr/lib/x86_64-linux-gnu/libbrotlidec.so.1.1.0
+74ec8801d000-74ec88027000 r--p 00000000 103:05 803853                    /usr/lib/x86_64-linux-gnu/libpixman-1.so.0.42.2
+74ec88027000-74ec880b4000 r-xp 0000a000 103:05 803853                    /usr/lib/x86_64-linux-gnu/libpixman-1.so.0.42.2
+74ec880b4000-74ec880c3000 r--p 00097000 103:05 803853                    /usr/lib/x86_64-linux-gnu/libpixman-1.so.0.42.2
+74ec880c3000-74ec880cb000 r--p 000a5000 103:05 803853                    /usr/lib/x86_64-linux-gnu/libpixman-1.so.0.42.2
+74ec880cb000-74ec880cc000 rw-p 000ad000 103:05 803853                    /usr/lib/x86_64-linux-gnu/libpixman-1.so.0.42.2
+74ec880cc000-74ec880cd000 ---p 00000000 00:00 0 
+74ec880cd000-74ec880d0000 ---p 00000000 00:00 0 
+74ec880d0000-74ec881cd000 rw-p 00000000 00:00 0 
+74ec881cd000-74ec881ce000 ---p 00000000 00:00 0 
+74ec881ce000-74ec881d1000 ---p 00000000 00:00 0 
+74ec881d1000-74ec882ce000 rw-p 00000000 00:00 0 
+74ec882ce000-74ec882cf000 ---p 00000000 00:00 0 
+74ec882cf000-74ec882d2000 ---p 00000000 00:00 0 
+74ec882d2000-74ec883cf000 rw-p 00000000 00:00 0 
+74ec883cf000-74ec883d0000 ---p 00000000 00:00 0 
+74ec883d0000-74ec883d3000 ---p 00000000 00:00 0 
+74ec883d3000-74ec884d0000 rw-p 00000000 00:00 0 
+74ec884d0000-74ec884d1000 ---p 00000000 00:00 0 
+74ec884d1000-74ec884d4000 ---p 00000000 00:00 0 
+74ec884d4000-74ec885d1000 rw-p 00000000 00:00 0 
+74ec885d1000-74ec885d2000 ---p 00000000 00:00 0 
+74ec885d2000-74ec885d5000 ---p 00000000 00:00 0 
+74ec885d5000-74ec886d2000 rw-p 00000000 00:00 0 
+74ec886d2000-74ec886d3000 ---p 00000000 00:00 0 
+74ec886d3000-74ec886d6000 ---p 00000000 00:00 0 
+74ec886d6000-74ec887d3000 rw-p 00000000 00:00 0 
+74ec887d3000-74ec887d4000 ---p 00000000 00:00 0 
+74ec887d4000-74ec887d7000 ---p 00000000 00:00 0 
+74ec887d7000-74ec888d4000 rw-p 00000000 00:00 0 
+74ec888d4000-74ec888d5000 ---p 00000000 00:00 0 
+74ec888d5000-74ec888d8000 ---p 00000000 00:00 0 
+74ec888d8000-74ec889d5000 rw-p 00000000 00:00 0 
+74ec889d5000-74ec889d6000 ---p 00000000 00:00 0 
+74ec889d6000-74ec889d9000 ---p 00000000 00:00 0 
+74ec889d9000-74ec88ad6000 rw-p 00000000 00:00 0 
+74ec88ad6000-74ec88ad9000 ---p 00000000 00:00 0 
+74ec88ad9000-74ec88bd6000 rw-p 00000000 00:00 0 
+74ec88bd6000-74ec88bd9000 ---p 00000000 00:00 0 
+74ec88bd9000-74ec88cd6000 rw-p 00000000 00:00 0 
+74ec88cd6000-74ec88cd9000 ---p 00000000 00:00 0 
+74ec88cd9000-74ec88dd6000 rw-p 00000000 00:00 0 
+74ec88dd6000-74ec88dd7000 ---p 00000000 00:00 0 
+74ec88dd7000-74ec88ed7000 rw-p 00000000 00:00 0 
+74ec88ed7000-74ec8bfc0000 rw-p 00000000 00:00 0 
+74ec8bfc0000-74ec8d3da000 rw-p 00000000 00:00 0 
+74ec8d3da000-74ec90000000 ---p 00000000 00:00 0 
+74ec90001000-74ec90002000 r--p 00000000 103:05 805147                    /usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-svg.so
+74ec90002000-74ec90003000 r-xp 00001000 103:05 805147                    /usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-svg.so
+74ec90003000-74ec90004000 r--p 00002000 103:05 805147                    /usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-svg.so
+74ec90004000-74ec90005000 r--p 00002000 103:05 805147                    /usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-svg.so
+74ec90005000-74ec90006000 rw-p 00003000 103:05 805147                    /usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-svg.so
+74ec90006000-74ec9000c000 r--p 00000000 103:05 803926                    /usr/lib/x86_64-linux-gnu/libselinux.so.1
+74ec9000c000-74ec90029000 r-xp 00006000 103:05 803926                    /usr/lib/x86_64-linux-gnu/libselinux.so.1
+74ec90029000-74ec9002f000 r--p 00023000 103:05 803926                    /usr/lib/x86_64-linux-gnu/libselinux.so.1
+74ec9002f000-74ec90030000 r--p 00029000 103:05 803926                    /usr/lib/x86_64-linux-gnu/libselinux.so.1
+74ec90030000-74ec90031000 rw-p 0002a000 103:05 803926                    /usr/lib/x86_64-linux-gnu/libselinux.so.1
+74ec90031000-74ec90033000 rw-p 00000000 00:00 0 
+74ec90033000-74ec90040000 r--p 00000000 103:05 803517                    /usr/lib/x86_64-linux-gnu/libfreetype.so.6.20.1
+74ec90040000-74ec900d1000 r-xp 0000d000 103:05 803517                    /usr/lib/x86_64-linux-gnu/libfreetype.so.6.20.1
+74ec900d1000-74ec900f7000 r--p 0009e000 103:05 803517                    /usr/lib/x86_64-linux-gnu/libfreetype.so.6.20.1
+74ec900f7000-74ec900fe000 r--p 000c4000 103:05 803517                    /usr/lib/x86_64-linux-gnu/libfreetype.so.6.20.1
+74ec900fe000-74ec900ff000 rw-p 000cb000 103:05 803517                    /usr/lib/x86_64-linux-gnu/libfreetype.so.6.20.1
+74ec900ff000-74ec90d98000 rw-p 00000000 00:00 0 
+74ec90d9a000-74ec90d9f000 r--s 0003f000 103:06 1079806                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/ext/sunjce_provider.jar
+74ec90d9f000-74ec90da1000 r--p 00000000 103:05 803375                    /usr/lib/x86_64-linux-gnu/libbz2.so.1.0.4
+74ec90da1000-74ec90daf000 r-xp 00002000 103:05 803375                    /usr/lib/x86_64-linux-gnu/libbz2.so.1.0.4
+74ec90daf000-74ec90db1000 r--p 00010000 103:05 803375                    /usr/lib/x86_64-linux-gnu/libbz2.so.1.0.4
+74ec90db1000-74ec90db2000 r--p 00011000 103:05 803375                    /usr/lib/x86_64-linux-gnu/libbz2.so.1.0.4
+74ec90db2000-74ec90db3000 rw-p 00012000 103:05 803375                    /usr/lib/x86_64-linux-gnu/libbz2.so.1.0.4
+74ec90db3000-74ec90dbc000 r--p 00000000 103:05 803741                    /usr/lib/x86_64-linux-gnu/libmount.so.1.1.0
+74ec90dbc000-74ec90df0000 r-xp 00009000 103:05 803741                    /usr/lib/x86_64-linux-gnu/libmount.so.1.1.0
+74ec90df0000-74ec90dfd000 r--p 0003d000 103:05 803741                    /usr/lib/x86_64-linux-gnu/libmount.so.1.1.0
+74ec90dfd000-74ec90dff000 r--p 00049000 103:05 803741                    /usr/lib/x86_64-linux-gnu/libmount.so.1.1.0
+74ec90dff000-74ec90e00000 rw-p 0004b000 103:05 803741                    /usr/lib/x86_64-linux-gnu/libmount.so.1.1.0
+74ec90e00000-74ec90ef6000 rw-p 00000000 00:00 0 
+74ec90ef6000-74ec915bb000 ---p 00000000 00:00 0 
+74ec915bc000-74ec915be000 r--p 00000000 103:05 803496                    /usr/lib/x86_64-linux-gnu/libffi.so.8.1.4
+74ec915be000-74ec915c5000 r-xp 00002000 103:05 803496                    /usr/lib/x86_64-linux-gnu/libffi.so.8.1.4
+74ec915c5000-74ec915c6000 r--p 00009000 103:05 803496                    /usr/lib/x86_64-linux-gnu/libffi.so.8.1.4
+74ec915c6000-74ec915c7000 r--p 0000a000 103:05 803496                    /usr/lib/x86_64-linux-gnu/libffi.so.8.1.4
+74ec915c7000-74ec915c8000 rw-p 0000b000 103:05 803496                    /usr/lib/x86_64-linux-gnu/libffi.so.8.1.4
+74ec915c8000-74ec915cd000 r--p 00000000 103:05 803862                    /usr/lib/x86_64-linux-gnu/libpng16.so.16.43.0
+74ec915cd000-74ec915f5000 r-xp 00005000 103:05 803862                    /usr/lib/x86_64-linux-gnu/libpng16.so.16.43.0
+74ec915f5000-74ec915fe000 r--p 0002d000 103:05 803862                    /usr/lib/x86_64-linux-gnu/libpng16.so.16.43.0
+74ec915fe000-74ec915ff000 r--p 00035000 103:05 803862                    /usr/lib/x86_64-linux-gnu/libpng16.so.16.43.0
+74ec915ff000-74ec91600000 rw-p 00036000 103:05 803862                    /usr/lib/x86_64-linux-gnu/libpng16.so.16.43.0
+74ec91600000-74ec916f6000 rw-p 00000000 00:00 0 
+74ec916f6000-74ec91dba000 ---p 00000000 00:00 0 
+74ec91dba000-74ec91e34000 rw-p 00000000 00:00 0 
+74ec91e34000-74ec92198000 ---p 00000000 00:00 0 
+74ec92198000-74ec92199000 rw-p 00000000 00:00 0 
+74ec9219b000-74ec9219d000 r--p 00000000 103:05 803421                    /usr/lib/x86_64-linux-gnu/libdatrie.so.1.4.0
+74ec9219d000-74ec921a1000 r-xp 00002000 103:05 803421                    /usr/lib/x86_64-linux-gnu/libdatrie.so.1.4.0
+74ec921a1000-74ec921a2000 r--p 00006000 103:05 803421                    /usr/lib/x86_64-linux-gnu/libdatrie.so.1.4.0
+74ec921a2000-74ec921a3000 r--p 00006000 103:05 803421                    /usr/lib/x86_64-linux-gnu/libdatrie.so.1.4.0
+74ec921a3000-74ec921a4000 rw-p 00007000 103:05 803421                    /usr/lib/x86_64-linux-gnu/libdatrie.so.1.4.0
+74ec921a4000-74ec921a6000 r--p 00000000 103:05 803981                    /usr/lib/x86_64-linux-gnu/libthai.so.0.3.1
+74ec921a6000-74ec921aa000 r-xp 00002000 103:05 803981                    /usr/lib/x86_64-linux-gnu/libthai.so.0.3.1
+74ec921aa000-74ec921ad000 r--p 00006000 103:05 803981                    /usr/lib/x86_64-linux-gnu/libthai.so.0.3.1
+74ec921ad000-74ec921ae000 r--p 00008000 103:05 803981                    /usr/lib/x86_64-linux-gnu/libthai.so.0.3.1
+74ec921ae000-74ec921af000 rw-p 00009000 103:05 803981                    /usr/lib/x86_64-linux-gnu/libthai.so.0.3.1
+74ec921af000-74ec921b7000 r--p 00000000 103:05 803502                    /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.1
+74ec921b7000-74ec921e6000 r-xp 00008000 103:05 803502                    /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.1
+74ec921e6000-74ec921fd000 r--p 00037000 103:05 803502                    /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.1
+74ec921fd000-74ec921ff000 r--p 0004d000 103:05 803502                    /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.1
+74ec921ff000-74ec92200000 rw-p 0004f000 103:05 803502                    /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.1
+74ec92200000-74ec9226d000 rw-p 00000000 00:00 0 
+74ec9226d000-74ec925c0000 ---p 00000000 00:00 0 
+74ec925c0000-74ec925c6000 r--p 00000000 103:06 1060259                   /home/omnipotent-havoc/.config/dconf/user (deleted)
+74ec925c6000-74ec925c8000 r--p 00000000 103:05 803518                    /usr/lib/x86_64-linux-gnu/libfribidi.so.0.4.0
+74ec925c8000-74ec925cc000 r-xp 00002000 103:05 803518                    /usr/lib/x86_64-linux-gnu/libfribidi.so.0.4.0
+74ec925cc000-74ec925e2000 r--p 00006000 103:05 803518                    /usr/lib/x86_64-linux-gnu/libfribidi.so.0.4.0
+74ec925e2000-74ec925e3000 r--p 0001c000 103:05 803518                    /usr/lib/x86_64-linux-gnu/libfribidi.so.0.4.0
+74ec925e3000-74ec925e4000 rw-p 0001d000 103:05 803518                    /usr/lib/x86_64-linux-gnu/libfribidi.so.0.4.0
+74ec925e4000-74ec925e6000 r--p 00000000 103:05 804107                    /usr/lib/x86_64-linux-gnu/libz.so.1.3
+74ec925e6000-74ec925f8000 r-xp 00002000 103:05 804107                    /usr/lib/x86_64-linux-gnu/libz.so.1.3
+74ec925f8000-74ec925fe000 r--p 00014000 103:05 804107                    /usr/lib/x86_64-linux-gnu/libz.so.1.3
+74ec925fe000-74ec925ff000 r--p 0001a000 103:05 804107                    /usr/lib/x86_64-linux-gnu/libz.so.1.3
+74ec925ff000-74ec92600000 rw-p 0001b000 103:05 804107                    /usr/lib/x86_64-linux-gnu/libz.so.1.3
+74ec92600000-74ec9261a000 r-xp 00000000 103:06 1068246                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/amd64/libzip.so
+74ec9261a000-74ec9281a000 ---p 0001a000 103:06 1068246                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/amd64/libzip.so
+74ec9281a000-74ec9281b000 r--p 0001a000 103:06 1068246                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/amd64/libzip.so
+74ec9281b000-74ec9281c000 rw-p 0001b000 103:06 1068246                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/amd64/libzip.so
+74ec9281e000-74ec9281f000 r--p 00000000 103:05 803797                    /usr/lib/x86_64-linux-gnu/libnss_mdns4_minimal.so.2
+74ec9281f000-74ec92821000 r-xp 00001000 103:05 803797                    /usr/lib/x86_64-linux-gnu/libnss_mdns4_minimal.so.2
+74ec92821000-74ec92822000 r--p 00003000 103:05 803797                    /usr/lib/x86_64-linux-gnu/libnss_mdns4_minimal.so.2
+74ec92822000-74ec92823000 r--p 00003000 103:05 803797                    /usr/lib/x86_64-linux-gnu/libnss_mdns4_minimal.so.2
+74ec92823000-74ec92824000 rw-p 00004000 103:05 803797                    /usr/lib/x86_64-linux-gnu/libnss_mdns4_minimal.so.2
+74ec92824000-74ec929fe000 r--s 03d6c000 103:06 1056070                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/rt.jar
+74ec929fe000-74ec929ff000 ---p 00000000 00:00 0 
+74ec929ff000-74ec92aff000 rw-p 00000000 00:00 0 
+74ec92aff000-74ec92b00000 ---p 00000000 00:00 0 
+74ec92b00000-74ec92c00000 rw-p 00000000 00:00 0 
+74ec92c00000-74ec92c2d000 r-xp 00000000 103:06 1068233                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/amd64/libjava.so
+74ec92c2d000-74ec92e2c000 ---p 0002d000 103:06 1068233                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/amd64/libjava.so
+74ec92e2c000-74ec92e2d000 r--p 0002c000 103:06 1068233                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/amd64/libjava.so
+74ec92e2d000-74ec92e2f000 rw-p 0002d000 103:06 1068233                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/amd64/libjava.so
+74ec92e2f000-74ec92e3e000 r--p 00000000 103:05 803569                    /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0.8000.0
+74ec92e3e000-74ec92e75000 r-xp 0000f000 103:05 803569                    /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0.8000.0
+74ec92e75000-74ec92e8e000 r--p 00046000 103:05 803569                    /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0.8000.0
+74ec92e8e000-74ec92e91000 r--p 0005e000 103:05 803569                    /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0.8000.0
+74ec92e91000-74ec92e92000 rw-p 00061000 103:05 803569                    /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0.8000.0
+74ec92e92000-74ec92ea5000 r--p 00000000 103:05 803830                    /usr/lib/x86_64-linux-gnu/libpango-1.0.so.0.5200.1
+74ec92ea5000-74ec92ede000 r-xp 00013000 103:05 803830                    /usr/lib/x86_64-linux-gnu/libpango-1.0.so.0.5200.1
+74ec92ede000-74ec92ef8000 r--p 0004c000 103:05 803830                    /usr/lib/x86_64-linux-gnu/libpango-1.0.so.0.5200.1
+74ec92ef8000-74ec92efc000 r--p 00065000 103:05 803830                    /usr/lib/x86_64-linux-gnu/libpango-1.0.so.0.5200.1
+74ec92efc000-74ec92efd000 rw-p 00069000 103:05 803830                    /usr/lib/x86_64-linux-gnu/libpango-1.0.so.0.5200.1
+74ec92efd000-74ec92efe000 ---p 00000000 00:00 0 
+74ec92efe000-74ec92ffe000 rw-p 00000000 00:00 0 
+74ec92ffe000-74ec92fff000 ---p 00000000 00:00 0 
+74ec92fff000-74ec930ff000 rw-p 00000000 00:00 0 
+74ec930ff000-74ec93100000 ---p 00000000 00:00 0 
+74ec93100000-74ec93200000 rw-p 00000000 00:00 0 
+74ec93200000-74ec9320d000 r-xp 00000000 103:06 1067730                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/amd64/libverify.so
+74ec9320d000-74ec9340c000 ---p 0000d000 103:06 1067730                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/amd64/libverify.so
+74ec9340c000-74ec9340e000 r--p 0000c000 103:06 1067730                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/amd64/libverify.so
+74ec9340e000-74ec9340f000 rw-p 0000e000 103:06 1067730                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/amd64/libverify.so
+74ec9340f000-74ec93411000 r--s 00009000 103:06 1079803                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/ext/sunec.jar
+74ec93411000-74ec93413000 r--s 00009000 103:06 1317834                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/tools/WiFi101/tool/WiFi101.jar
+74ec93413000-74ec93418000 r--p 00000000 103:05 804080                    /usr/lib/x86_64-linux-gnu/libxcb-render.so.0.0.0
+74ec93418000-74ec9341d000 r-xp 00005000 103:05 804080                    /usr/lib/x86_64-linux-gnu/libxcb-render.so.0.0.0
+74ec9341d000-74ec93420000 r--p 0000a000 103:05 804080                    /usr/lib/x86_64-linux-gnu/libxcb-render.so.0.0.0
+74ec93420000-74ec93421000 r--p 0000c000 103:05 804080                    /usr/lib/x86_64-linux-gnu/libxcb-render.so.0.0.0
+74ec93421000-74ec93422000 rw-p 0000d000 103:05 804080                    /usr/lib/x86_64-linux-gnu/libxcb-render.so.0.0.0
+74ec93422000-74ec9342a000 r--p 00000000 103:05 803832                    /usr/lib/x86_64-linux-gnu/libpangoft2-1.0.so.0.5200.1
+74ec9342a000-74ec93437000 r-xp 00008000 103:05 803832                    /usr/lib/x86_64-linux-gnu/libpangoft2-1.0.so.0.5200.1
+74ec93437000-74ec9343b000 r--p 00015000 103:05 803832                    /usr/lib/x86_64-linux-gnu/libpangoft2-1.0.so.0.5200.1
+74ec9343b000-74ec9343c000 r--p 00019000 103:05 803832                    /usr/lib/x86_64-linux-gnu/libpangoft2-1.0.so.0.5200.1
+74ec9343c000-74ec9343d000 rw-p 0001a000 103:05 803832                    /usr/lib/x86_64-linux-gnu/libpangoft2-1.0.so.0.5200.1
+74ec9343d000-74ec93459000 r--p 00000000 103:05 803538                    /usr/lib/x86_64-linux-gnu/libgdk-x11-2.0.so.0.2400.33
+74ec93459000-74ec934c2000 r-xp 0001c000 103:05 803538                    /usr/lib/x86_64-linux-gnu/libgdk-x11-2.0.so.0.2400.33
+74ec934c2000-74ec934f7000 r--p 00085000 103:05 803538                    /usr/lib/x86_64-linux-gnu/libgdk-x11-2.0.so.0.2400.33
+74ec934f7000-74ec934fb000 r--p 000b9000 103:05 803538                    /usr/lib/x86_64-linux-gnu/libgdk-x11-2.0.so.0.2400.33
+74ec934fb000-74ec934fd000 rw-p 000bd000 103:05 803538                    /usr/lib/x86_64-linux-gnu/libgdk-x11-2.0.so.0.2400.33
+74ec934fd000-74ec934fe000 ---p 00000000 00:00 0 
+74ec934fe000-74ec935fe000 rw-p 00000000 00:00 0 
+74ec935fe000-74ec935ff000 ---p 00000000 00:00 0 
+74ec935ff000-74ec936ff000 rw-p 00000000 00:00 0 
+74ec936ff000-74ec93700000 ---p 00000000 00:00 0 
+74ec93700000-74ec93800000 rw-p 00000000 00:00 0 
+74ec93800000-74ec945ec000 r--p 00000000 103:05 794015                    /usr/lib/locale/locale-archive
+74ec945ec000-74ec945ed000 r--p 00000000 103:05 803609                    /usr/lib/x86_64-linux-gnu/libgthread-2.0.so.0.8000.0
+74ec945ed000-74ec945ee000 r-xp 00001000 103:05 803609                    /usr/lib/x86_64-linux-gnu/libgthread-2.0.so.0.8000.0
+74ec945ee000-74ec945ef000 r--p 00002000 103:05 803609                    /usr/lib/x86_64-linux-gnu/libgthread-2.0.so.0.8000.0
+74ec945ef000-74ec945f0000 r--p 00002000 103:05 803609                    /usr/lib/x86_64-linux-gnu/libgthread-2.0.so.0.8000.0
+74ec945f0000-74ec945f1000 rw-p 00003000 103:05 803609                    /usr/lib/x86_64-linux-gnu/libgthread-2.0.so.0.8000.0
+74ec945f1000-74ec945f2000 r--p 00000000 103:05 804083                    /usr/lib/x86_64-linux-gnu/libxcb-shm.so.0.0.0
+74ec945f2000-74ec945f3000 r-xp 00001000 103:05 804083                    /usr/lib/x86_64-linux-gnu/libxcb-shm.so.0.0.0
+74ec945f3000-74ec945f4000 r--p 00002000 103:05 804083                    /usr/lib/x86_64-linux-gnu/libxcb-shm.so.0.0.0
+74ec945f4000-74ec945f5000 r--p 00002000 103:05 804083                    /usr/lib/x86_64-linux-gnu/libxcb-shm.so.0.0.0
+74ec945f5000-74ec945f6000 rw-p 00003000 103:05 804083                    /usr/lib/x86_64-linux-gnu/libxcb-shm.so.0.0.0
+74ec945f6000-74ec945f7000 r--p 00000000 103:05 803224                    /usr/lib/x86_64-linux-gnu/libXdamage.so.1.1.0
+74ec945f7000-74ec945f8000 r-xp 00001000 103:05 803224                    /usr/lib/x86_64-linux-gnu/libXdamage.so.1.1.0
+74ec945f8000-74ec945f9000 r--p 00002000 103:05 803224                    /usr/lib/x86_64-linux-gnu/libXdamage.so.1.1.0
+74ec945f9000-74ec945fa000 r--p 00002000 103:05 803224                    /usr/lib/x86_64-linux-gnu/libXdamage.so.1.1.0
+74ec945fa000-74ec945fb000 rw-p 00003000 103:05 803224                    /usr/lib/x86_64-linux-gnu/libXdamage.so.1.1.0
+74ec945fb000-74ec945fc000 r--p 00000000 103:05 803222                    /usr/lib/x86_64-linux-gnu/libXcomposite.so.1.0.0
+74ec945fc000-74ec945fd000 r-xp 00001000 103:05 803222                    /usr/lib/x86_64-linux-gnu/libXcomposite.so.1.0.0
+74ec945fd000-74ec945fe000 r--p 00002000 103:05 803222                    /usr/lib/x86_64-linux-gnu/libXcomposite.so.1.0.0
+74ec945fe000-74ec945ff000 r--p 00002000 103:05 803222                    /usr/lib/x86_64-linux-gnu/libXcomposite.so.1.0.0
+74ec945ff000-74ec94600000 rw-p 00003000 103:05 803222                    /usr/lib/x86_64-linux-gnu/libXcomposite.so.1.0.0
+74ec94600000-74ec94601000 ---p 00000000 00:00 0 
+74ec94601000-74ec94e01000 rw-p 00000000 00:00 0 
+74ec94e01000-74ec94e04000 r--s 0001a000 103:06 1078162                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/jce.jar
+74ec94e04000-74ec94e06000 r--p 00000000 103:05 803235                    /usr/lib/x86_64-linux-gnu/libXrandr.so.2.2.0
+74ec94e06000-74ec94e0d000 r-xp 00002000 103:05 803235                    /usr/lib/x86_64-linux-gnu/libXrandr.so.2.2.0
+74ec94e0d000-74ec94e0f000 r--p 00009000 103:05 803235                    /usr/lib/x86_64-linux-gnu/libXrandr.so.2.2.0
+74ec94e0f000-74ec94e10000 r--p 0000a000 103:05 803235                    /usr/lib/x86_64-linux-gnu/libXrandr.so.2.2.0
+74ec94e10000-74ec94e11000 rw-p 0000b000 103:05 803235                    /usr/lib/x86_64-linux-gnu/libXrandr.so.2.2.0
+74ec94e11000-74ec94e12000 r--p 00000000 103:05 803231                    /usr/lib/x86_64-linux-gnu/libXinerama.so.1.0.0
+74ec94e12000-74ec94e13000 r-xp 00001000 103:05 803231                    /usr/lib/x86_64-linux-gnu/libXinerama.so.1.0.0
+74ec94e13000-74ec94e14000 r--p 00002000 103:05 803231                    /usr/lib/x86_64-linux-gnu/libXinerama.so.1.0.0
+74ec94e14000-74ec94e15000 r--p 00002000 103:05 803231                    /usr/lib/x86_64-linux-gnu/libXinerama.so.1.0.0
+74ec94e15000-74ec94e16000 rw-p 00003000 103:05 803231                    /usr/lib/x86_64-linux-gnu/libXinerama.so.1.0.0
+74ec94e16000-74ec94e1e000 r--p 00000000 103:05 803539                    /usr/lib/x86_64-linux-gnu/libgdk_pixbuf-2.0.so.0.4200.10
+74ec94e1e000-74ec94e39000 r-xp 00008000 103:05 803539                    /usr/lib/x86_64-linux-gnu/libgdk_pixbuf-2.0.so.0.4200.10
+74ec94e39000-74ec94e42000 r--p 00023000 103:05 803539                    /usr/lib/x86_64-linux-gnu/libgdk_pixbuf-2.0.so.0.4200.10
+74ec94e42000-74ec94e43000 r--p 0002c000 103:05 803539                    /usr/lib/x86_64-linux-gnu/libgdk_pixbuf-2.0.so.0.4200.10
+74ec94e43000-74ec94e44000 rw-p 0002d000 103:05 803539                    /usr/lib/x86_64-linux-gnu/libgdk_pixbuf-2.0.so.0.4200.10
+74ec94e44000-74ec94e4f000 r--p 00000000 103:05 803328                    /usr/lib/x86_64-linux-gnu/libatk-1.0.so.0.25209.1
+74ec94e4f000-74ec94e5f000 r-xp 0000b000 103:05 803328                    /usr/lib/x86_64-linux-gnu/libatk-1.0.so.0.25209.1
+74ec94e5f000-74ec94e6a000 r--p 0001b000 103:05 803328                    /usr/lib/x86_64-linux-gnu/libatk-1.0.so.0.25209.1
+74ec94e6a000-74ec94e6d000 r--p 00026000 103:05 803328                    /usr/lib/x86_64-linux-gnu/libatk-1.0.so.0.25209.1
+74ec94e6d000-74ec94e6e000 rw-p 00029000 103:05 803328                    /usr/lib/x86_64-linux-gnu/libatk-1.0.so.0.25209.1
+74ec94e6e000-74ec94e73000 r--p 00000000 103:05 803831                    /usr/lib/x86_64-linux-gnu/libpangocairo-1.0.so.0.5200.1
+74ec94e73000-74ec94e7b000 r-xp 00005000 103:05 803831                    /usr/lib/x86_64-linux-gnu/libpangocairo-1.0.so.0.5200.1
+74ec94e7b000-74ec94e7d000 r--p 0000d000 103:05 803831                    /usr/lib/x86_64-linux-gnu/libpangocairo-1.0.so.0.5200.1
+74ec94e7d000-74ec94e7e000 r--p 0000f000 103:05 803831                    /usr/lib/x86_64-linux-gnu/libpangocairo-1.0.so.0.5200.1
+74ec94e7e000-74ec94e7f000 rw-p 00010000 103:05 803831                    /usr/lib/x86_64-linux-gnu/libpangocairo-1.0.so.0.5200.1
+74ec94e7f000-74ec94e83000 r--p 00000000 103:05 803526                    /usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+74ec94e83000-74ec94ea6000 r-xp 00004000 103:05 803526                    /usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+74ec94ea6000-74ec94eaa000 r--p 00027000 103:05 803526                    /usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+74ec94eaa000-74ec94eab000 r--p 0002b000 103:05 803526                    /usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+74ec94eab000-74ec94eac000 rw-p 0002c000 103:05 803526                    /usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+74ec94eac000-74ec94eaf000 r--p 00000000 103:05 803230                    /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+74ec94eaf000-74ec94ebb000 r-xp 00003000 103:05 803230                    /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+74ec94ebb000-74ec94ebd000 r--p 0000f000 103:05 803230                    /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+74ec94ebd000-74ec94ebe000 r--p 00011000 103:05 803230                    /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+74ec94ebe000-74ec94ebf000 rw-p 00012000 103:05 803230                    /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+74ec94ec0000-74ec94ec5000 r--s 000a0000 103:06 1078172                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/jsse.jar
+74ec94ec5000-74ec94ec6000 r--s 00000000 103:06 1061150                   /home/omnipotent-havoc/.local/share/mime/mime.cache
+74ec94ec6000-74ec94ecc000 r--s 00000000 103:06 1048746                   /home/omnipotent-havoc/.cache/fontconfig/d589a48862398ed80a3d6066f4f56f4c-le64.cache-9
+74ec94ecc000-74ec94ed1000 r--s 00000000 103:05 670860                    /var/cache/fontconfig/c57959a16110560c8d0fcea73374aeeb-le64.cache-9
+74ec94ed1000-74ec94ed2000 r--s 00000000 103:06 1048797                   /home/omnipotent-havoc/.cache/fontconfig/3f7329c5293ffd510edef78f73874cfd-le64.cache-9
+74ec94ed2000-74ec94ed4000 r--p 00000000 103:05 805434                    /usr/lib/x86_64-linux-gnu/gtk-2.0/2.10.0/engines/libpixmap.so
+74ec94ed4000-74ec94eda000 r-xp 00002000 103:05 805434                    /usr/lib/x86_64-linux-gnu/gtk-2.0/2.10.0/engines/libpixmap.so
+74ec94eda000-74ec94edc000 r--p 00008000 103:05 805434                    /usr/lib/x86_64-linux-gnu/gtk-2.0/2.10.0/engines/libpixmap.so
+74ec94edc000-74ec94edd000 r--p 00009000 103:05 805434                    /usr/lib/x86_64-linux-gnu/gtk-2.0/2.10.0/engines/libpixmap.so
+74ec94edd000-74ec94ede000 rw-p 0000a000 103:05 805434                    /usr/lib/x86_64-linux-gnu/gtk-2.0/2.10.0/engines/libpixmap.so
+74ec94ede000-74ec94edf000 r--p 00000000 103:05 805432                    /usr/lib/x86_64-linux-gnu/gtk-2.0/2.10.0/engines/libadwaita.so
+74ec94edf000-74ec94ee0000 r-xp 00001000 103:05 805432                    /usr/lib/x86_64-linux-gnu/gtk-2.0/2.10.0/engines/libadwaita.so
+74ec94ee0000-74ec94ee1000 r--p 00002000 103:05 805432                    /usr/lib/x86_64-linux-gnu/gtk-2.0/2.10.0/engines/libadwaita.so
+74ec94ee1000-74ec94ee2000 r--p 00002000 103:05 805432                    /usr/lib/x86_64-linux-gnu/gtk-2.0/2.10.0/engines/libadwaita.so
+74ec94ee2000-74ec94ee3000 rw-p 00003000 103:05 805432                    /usr/lib/x86_64-linux-gnu/gtk-2.0/2.10.0/engines/libadwaita.so
+74ec94ee3000-74ec94eff000 r--s 00393000 103:06 1079807                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/ext/cldrdata.jar
+74ec94eff000-74ec94f00000 ---p 00000000 00:00 0 
+74ec94f00000-74ec95000000 rw-p 00000000 00:00 0 
+74ec95000000-74ec9505f000 r-xp 00000000 103:06 1068102                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/amd64/libsplashscreen.so
+74ec9505f000-74ec9525f000 ---p 0005f000 103:06 1068102                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/amd64/libsplashscreen.so
+74ec9525f000-74ec95260000 r--p 0005f000 103:06 1068102                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/amd64/libsplashscreen.so
+74ec95260000-74ec95261000 rw-p 00060000 103:06 1068102                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/amd64/libsplashscreen.so
+74ec95261000-74ec95264000 rw-p 00000000 00:00 0 
+74ec95264000-74ec95266000 r--p 00000000 103:05 803554                    /usr/lib/x86_64-linux-gnu/libgmodule-2.0.so.0.8000.0
+74ec95266000-74ec95268000 r-xp 00002000 103:05 803554                    /usr/lib/x86_64-linux-gnu/libgmodule-2.0.so.0.8000.0
+74ec95268000-74ec95269000 r--p 00004000 103:05 803554                    /usr/lib/x86_64-linux-gnu/libgmodule-2.0.so.0.8000.0
+74ec95269000-74ec9526a000 r--p 00004000 103:05 803554                    /usr/lib/x86_64-linux-gnu/libgmodule-2.0.so.0.8000.0
+74ec9526a000-74ec9526b000 rw-p 00005000 103:05 803554                    /usr/lib/x86_64-linux-gnu/libgmodule-2.0.so.0.8000.0
+74ec9526b000-74ec9526d000 r--p 00000000 103:05 803239                    /usr/lib/x86_64-linux-gnu/libXtst.so.6.1.0
+74ec9526d000-74ec95270000 r-xp 00002000 103:05 803239                    /usr/lib/x86_64-linux-gnu/libXtst.so.6.1.0
+74ec95270000-74ec95271000 r--p 00005000 103:05 803239                    /usr/lib/x86_64-linux-gnu/libXtst.so.6.1.0
+74ec95271000-74ec95272000 r--p 00005000 103:05 803239                    /usr/lib/x86_64-linux-gnu/libXtst.so.6.1.0
+74ec95272000-74ec95273000 rw-p 00006000 103:05 803239                    /usr/lib/x86_64-linux-gnu/libXtst.so.6.1.0
+74ec95273000-74ec9527d000 r--s 00116000 103:06 1056026                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/ext/localedata.jar
+74ec9527d000-74ec95289000 r--s 0008f000 103:06 1049415                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/xmlgraphics-commons-2.0.jar
+74ec95289000-74ec9528e000 r--s 00010000 103:06 1050291                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/xml-apis-ext-1.3.04.jar
+74ec9528e000-74ec95296000 r--s 00028000 103:06 1050293                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/xml-apis-1.3.04.jar
+74ec95296000-74ec952a2000 r--s 00110000 103:06 1049453                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/rsyntaxtextarea-3.0.3-SNAPSHOT.jar
+74ec952a2000-74ec952a5000 ---p 00000000 00:00 0 
+74ec952a5000-74ec952db000 rw-p 00000000 00:00 0 
+74ec952db000-74ec952fd000 r--s 00193000 103:06 1049411                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/log4j-core-2.16.0.jar
+74ec952fd000-74ec952fe000 ---p 00000000 00:00 0 
+74ec952fe000-74ec953fe000 rw-p 00000000 00:00 0 
+74ec953fe000-74ec953ff000 ---p 00000000 00:00 0 
+74ec953ff000-74ec954ff000 rw-p 00000000 00:00 0 
+74ec954ff000-74ec95500000 ---p 00000000 00:00 0 
+74ec95500000-74ec95600000 rw-p 00000000 00:00 0 
+74ec95600000-74ec962e2000 r-xp 00000000 103:06 1317577                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/amd64/server/libjvm.so
+74ec962e2000-74ec964e2000 ---p 00ce2000 103:06 1317577                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/amd64/server/libjvm.so
+74ec964e2000-74ec96578000 r--p 00ce2000 103:06 1317577                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/amd64/server/libjvm.so
+74ec96578000-74ec965a9000 rw-p 00d78000 103:06 1317577                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/amd64/server/libjvm.so
+74ec965a9000-74ec965e4000 rw-p 00000000 00:00 0 
+74ec965e4000-74ec965e5000 r--s 00000000 103:05 673172                    /var/cache/fontconfig/da43223dd54fb3bb4243ae19d4b583b2-le64.cache-9
+74ec965e5000-74ec965e6000 r--s 00002000 103:06 1050207                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/slf4j-simple-1.7.22.jar
+74ec965e6000-74ec965e9000 r--p 00000000 103:06 1049455                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/liblistSerialsj.so
+74ec965e9000-74ec965f8000 r-xp 00003000 103:06 1049455                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/liblistSerialsj.so
+74ec965f8000-74ec965fc000 r--p 00012000 103:06 1049455                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/liblistSerialsj.so
+74ec965fc000-74ec965fd000 r--p 00015000 103:06 1049455                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/liblistSerialsj.so
+74ec965fd000-74ec965fe000 rw-p 00016000 103:06 1049455                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/liblistSerialsj.so
+74ec965fe000-74ec965ff000 ---p 00000000 00:00 0 
+74ec965ff000-74ec966ff000 rw-p 00000000 00:00 0 
+74ec966ff000-74ec96700000 ---p 00000000 00:00 0 
+74ec96700000-74ec96703000 ---p 00000000 00:00 0 
+74ec96703000-74ec96800000 rw-p 00000000 00:00 0 
+74ec96800000-74ec96828000 r--p 00000000 103:05 803376                    /usr/lib/x86_64-linux-gnu/libc.so.6
+74ec96828000-74ec969b0000 r-xp 00028000 103:05 803376                    /usr/lib/x86_64-linux-gnu/libc.so.6
+74ec969b0000-74ec969ff000 r--p 001b0000 103:05 803376                    /usr/lib/x86_64-linux-gnu/libc.so.6
+74ec969ff000-74ec96a03000 r--p 001fe000 103:05 803376                    /usr/lib/x86_64-linux-gnu/libc.so.6
+74ec96a03000-74ec96a05000 rw-p 00202000 103:05 803376                    /usr/lib/x86_64-linux-gnu/libc.so.6
+74ec96a05000-74ec96a12000 rw-p 00000000 00:00 0 
+74ec96a12000-74ec96a14000 r--s 00009000 103:06 1049451                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/slf4j-api-1.7.22.jar
+74ec96a14000-74ec96a1b000 r--s 00062000 103:06 1050276                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/pde.jar
+74ec96a1b000-74ec96a21000 r--s 00044000 103:06 1050292                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/log4j-api-2.16.0.jar
+74ec96a21000-74ec96a24000 r--s 0004f000 103:06 1052033                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/jtouchbar-1.0.0.jar
+74ec96a24000-74ec96a28000 r--s 0003b000 103:06 1050753                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/jsch-0.1.50.jar
+74ec96a28000-74ec96a3e000 r--s 001b0000 103:06 1049423                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/jna-platform-4.2.2.jar
+74ec96a3e000-74ec96a42000 r--s 00112000 103:06 1049437                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/jna-4.2.2.jar
+74ec96a42000-74ec96a46000 r--s 00031000 103:06 1050161                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/jmdns-3.5.5.jar
+74ec96a46000-74ec96a48000 r--s 00009000 103:06 1049427                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/java-semver-0.8.0.jar
+74ec96a48000-74ec96a5b000 r--s 00135000 103:06 1049443                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/jackson-databind-2.9.5.jar
+74ec96a5b000-74ec96a5f000 r--s 0004b000 103:06 1049450                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/jackson-core-2.9.5.jar
+74ec96a5f000-74ec96a62000 r--s 0000e000 103:06 1050751                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/jackson-annotations-2.9.5.jar
+74ec96a62000-74ec96a68000 r--s 0003f000 103:06 1049414                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/commons-net-3.3.jar
+74ec96a68000-74ec96a6a000 r--s 00008000 103:06 1052036                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/commons-logging-1.0.4.jar
+74ec96a6a000-74ec96a72000 r--s 00073000 103:06 1050818                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/commons-lang3-3.8.1.jar
+74ec96a72000-74ec96a76000 r--s 00031000 103:06 1049399                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/commons-io-2.6.jar
+74ec96a76000-74ec96a7c000 r--s 00045000 103:06 1050878                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/commons-httpclient-3.1.jar
+74ec96a7c000-74ec96a7e000 r--s 0000b000 103:06 1050086                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/commons-exec-1.1.jar
+74ec96a7e000-74ec96a85000 r--s 00053000 103:06 1049441                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/commons-compress-1.8.jar
+74ec96a85000-74ec96a8c000 r--s 00039000 103:06 1049445                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/commons-codec-1.7.jar
+74ec96a8c000-74ec96acc000 r--s 00285000 103:06 1052035                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/bcprov-jdk15on-152.jar
+74ec96acd000-74ec96acf000 r--p 00000000 103:05 942973                    /usr/share/icons/Yaru-sage/icon-theme.cache
+74ec96acf000-74ec96ad0000 r--s 00000000 00:37 244                        /run/user/1000/dconf/user (deleted)
+74ec96ad0000-74ec96ad4000 r--p 00000000 103:05 805154                    /usr/lib/x86_64-linux-gnu/gio/modules/libdconfsettings.so
+74ec96ad4000-74ec96adb000 r-xp 00004000 103:05 805154                    /usr/lib/x86_64-linux-gnu/gio/modules/libdconfsettings.so
+74ec96adb000-74ec96add000 r--p 0000b000 103:05 805154                    /usr/lib/x86_64-linux-gnu/gio/modules/libdconfsettings.so
+74ec96add000-74ec96ade000 r--p 0000d000 103:05 805154                    /usr/lib/x86_64-linux-gnu/gio/modules/libdconfsettings.so
+74ec96ade000-74ec96adf000 rw-p 0000e000 103:05 805154                    /usr/lib/x86_64-linux-gnu/gio/modules/libdconfsettings.so
+74ec96adf000-74ec96ae1000 r--p 00000000 103:05 805155                    /usr/lib/x86_64-linux-gnu/gio/modules/libgiognomeproxy.so
+74ec96ae1000-74ec96ae3000 r-xp 00002000 103:05 805155                    /usr/lib/x86_64-linux-gnu/gio/modules/libgiognomeproxy.so
+74ec96ae3000-74ec96ae4000 r--p 00004000 103:05 805155                    /usr/lib/x86_64-linux-gnu/gio/modules/libgiognomeproxy.so
+74ec96ae4000-74ec96ae5000 r--p 00004000 103:05 805155                    /usr/lib/x86_64-linux-gnu/gio/modules/libgiognomeproxy.so
+74ec96ae5000-74ec96ae6000 rw-p 00005000 103:05 805155                    /usr/lib/x86_64-linux-gnu/gio/modules/libgiognomeproxy.so
+74ec96b19000-74ec96b66000 rw-s 00000000 00:01 688143                     /SYSV00000000 (deleted)
+74ec96b66000-74ec96b67000 r--s 00027000 103:06 1049447                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/jssc-2.8.0-arduino4.jar
+74ec96b67000-74ec96b6e000 r--s 0003c000 103:06 1050267                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/bcpg-jdk15on-152.jar
+74ec96b6e000-74ec96b6f000 r--s 00006000 103:06 1052109                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/batik-xml-1.8.jar
+74ec96b6f000-74ec96b72000 r--s 00018000 103:06 1049435                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/batik-util-1.8.jar
+74ec96b72000-74ec96b75000 r--s 00014000 103:06 1049436                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/batik-transcoder-1.8.jar
+74ec96b75000-74ec96b7a000 r--s 00031000 103:06 1049407                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/batik-svg-dom-1.8.jar
+74ec96b7a000-74ec96b7d000 r--s 0000b000 103:06 1049454                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/batik-parser-1.8.jar
+74ec96b7d000-74ec96b81000 r--s 00020000 103:06 1049449                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/batik-gvt-1.8.jar
+74ec96b81000-74ec96b85000 r--s 0001f000 103:06 1049448                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/batik-dom-1.8.jar
+74ec96b85000-74ec96b8c000 r--s 00038000 103:06 1052078                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/batik-css-1.8.jar
+74ec96b8c000-74ec96c00000 rw-p 00000000 00:00 0 
+74ec96c00000-74ec96c17000 r-xp 00000000 103:06 1067994                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/amd64/jli/libjli.so
+74ec96c17000-74ec96e16000 ---p 00017000 103:06 1067994                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/amd64/jli/libjli.so
+74ec96e16000-74ec96e17000 r--p 00016000 103:06 1067994                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/amd64/jli/libjli.so
+74ec96e17000-74ec96e18000 rw-p 00017000 103:06 1067994                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/amd64/jli/libjli.so
+74ec96e18000-74ec96e1a000 r--s 00003000 103:06 1050087                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/batik-script-1.8.jar
+74ec96e1a000-74ec96e1b000 r--s 00002000 103:06 1050239                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/batik-ext-1.8.jar
+74ec96e1b000-74ec96e27000 r--s 00076000 103:06 1049410                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/batik-bridge-1.8.jar
+74ec96e27000-74ec96e2e000 r--s 00043000 103:06 1052034                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/batik-awt-util-1.8.jar
+74ec96e2e000-74ec96e3a000 r--s 00051000 103:06 1052032                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/batik-anim-1.8.jar
+74ec96e3a000-74ec96e3c000 r--p 00000000 103:05 803227                    /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+74ec96e3c000-74ec96e3f000 r-xp 00002000 103:05 803227                    /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+74ec96e3f000-74ec96e40000 r--p 00005000 103:05 803227                    /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+74ec96e40000-74ec96e41000 r--p 00005000 103:05 803227                    /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+74ec96e41000-74ec96e42000 rw-p 00006000 103:05 803227                    /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+74ec96e42000-74ec96e45000 r--s 00018000 103:06 1049444                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/batik-codec-1.8.jar
+74ec96e45000-74ec96e47000 r--s 00003000 103:06 1052110                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/batik-svgpp-1.8.jar
+74ec96e47000-74ec96e49000 r--s 0000a000 103:06 1052116                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/batik-rasterizer-1.8.jar
+74ec96e49000-74ec96e52000 r--s 00072000 103:06 1050782                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/batik-squiggle-1.8.jar
+74ec96e52000-74ec96e53000 r--s 00001000 103:06 1049452                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/batik-1.8.jar
+74ec96e53000-74ec96e59000 r--s 00190000 103:06 1049406                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/arduino-core.jar
+74ec96e59000-74ec96e5c000 r--s 00004000 103:06 1050812                   /home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/apple.jar
+74ec96e5c000-74ec96e64000 rw-s 00000000 103:05 525412                    /tmp/hsperfdata_omnipotent-havoc/8943
+74ec96e64000-74ec96e65000 rw-p 00000000 00:00 0 
+74ec96e65000-74ec96e66000 r--p 00000000 00:00 0 
+74ec96e66000-74ec96e68000 r--p 00000000 103:05 803730                    /usr/lib/x86_64-linux-gnu/libmd.so.0.1.0
+74ec96e68000-74ec96e71000 r-xp 00002000 103:05 803730                    /usr/lib/x86_64-linux-gnu/libmd.so.0.1.0
+74ec96e71000-74ec96e73000 r--p 0000b000 103:05 803730                    /usr/lib/x86_64-linux-gnu/libmd.so.0.1.0
+74ec96e73000-74ec96e74000 r--p 0000c000 103:05 803730                    /usr/lib/x86_64-linux-gnu/libmd.so.0.1.0
+74ec96e74000-74ec96e75000 rw-p 0000d000 103:05 803730                    /usr/lib/x86_64-linux-gnu/libmd.so.0.1.0
+74ec96e75000-74ec96e79000 r--p 00000000 103:05 803372                    /usr/lib/x86_64-linux-gnu/libbsd.so.0.12.1
+74ec96e79000-74ec96e85000 r-xp 00004000 103:05 803372                    /usr/lib/x86_64-linux-gnu/libbsd.so.0.12.1
+74ec96e85000-74ec96e88000 r--p 00010000 103:05 803372                    /usr/lib/x86_64-linux-gnu/libbsd.so.0.12.1
+74ec96e88000-74ec96e89000 r--p 00012000 103:05 803372                    /usr/lib/x86_64-linux-gnu/libbsd.so.0.12.1
+74ec96e89000-74ec96e8a000 rw-p 00013000 103:05 803372                    /usr/lib/x86_64-linux-gnu/libbsd.so.0.12.1
+74ec96e8a000-74ec96e8b000 rw-p 00000000 00:00 0 
+74ec96e8b000-74ec96e8d000 r--p 00000000 103:05 803225                    /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+74ec96e8d000-74ec96e8f000 r-xp 00002000 103:05 803225                    /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+74ec96e8f000-74ec96e91000 r--p 00004000 103:05 803225                    /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+74ec96e91000-74ec96e92000 r--p 00005000 103:05 803225                    /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+74ec96e92000-74ec96e93000 rw-p 00006000 103:05 803225                    /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+74ec96e93000-74ec96e94000 r--p 00000000 103:05 803220                    /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+74ec96e94000-74ec96e96000 r-xp 00001000 103:05 803220                    /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+74ec96e96000-74ec96e97000 r--p 00003000 103:05 803220                    /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+74ec96e97000-74ec96e98000 r--p 00003000 103:05 803220                    /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+74ec96e98000-74ec96e99000 rw-p 00004000 103:05 803220                    /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+74ec96e99000-74ec96ea4000 r--p 00000000 103:05 804089                    /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+74ec96ea4000-74ec96eb7000 r-xp 0000b000 103:05 804089                    /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+74ec96eb7000-74ec96ec0000 r--p 0001e000 103:05 804089                    /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+74ec96ec0000-74ec96ec1000 r--p 00026000 103:05 804089                    /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+74ec96ec1000-74ec96ec2000 rw-p 00027000 103:05 804089                    /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+74ec96ec2000-74ec96ec6000 r--p 00000000 103:05 803226                    /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+74ec96ec6000-74ec96ed1000 r-xp 00004000 103:05 803226                    /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+74ec96ed1000-74ec96ed4000 r--p 0000f000 103:05 803226                    /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+74ec96ed4000-74ec96ed5000 r--p 00011000 103:05 803226                    /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+74ec96ed5000-74ec96ed6000 rw-p 00012000 103:05 803226                    /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+74ec96ed6000-74ec96eef000 r--p 00000000 103:05 803218                    /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0
+74ec96eef000-74ec96f7f000 r-xp 00019000 103:05 803218                    /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0
+74ec96f7f000-74ec9700e000 r--p 000a9000 103:05 803218                    /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0
+74ec9700e000-74ec9700f000 r--p 00138000 103:05 803218                    /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0
+74ec9700f000-74ec97013000 rw-p 00139000 103:05 803218                    /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0
+74ec97013000-74ec97023000 r--p 00000000 103:05 803719                    /usr/lib/x86_64-linux-gnu/libm.so.6
+74ec97023000-74ec970a2000 r-xp 00010000 103:05 803719                    /usr/lib/x86_64-linux-gnu/libm.so.6
+74ec970a2000-74ec970fa000 r--p 0008f000 103:05 803719                    /usr/lib/x86_64-linux-gnu/libm.so.6
+74ec970fa000-74ec970fb000 r--p 000e7000 103:05 803719                    /usr/lib/x86_64-linux-gnu/libm.so.6
+74ec970fb000-74ec970fc000 rw-p 000e8000 103:05 803719                    /usr/lib/x86_64-linux-gnu/libm.so.6
+74ec970fc000-74ec970fe000 rw-p 00000000 00:00 0 
+74ec970fe000-74ec970ff000 r--p 00000000 103:05 803442                    /usr/lib/x86_64-linux-gnu/libdl.so.2
+74ec970ff000-74ec97100000 r-xp 00001000 103:05 803442                    /usr/lib/x86_64-linux-gnu/libdl.so.2
+74ec97100000-74ec97101000 r--p 00002000 103:05 803442                    /usr/lib/x86_64-linux-gnu/libdl.so.2
+74ec97101000-74ec97102000 r--p 00002000 103:05 803442                    /usr/lib/x86_64-linux-gnu/libdl.so.2
+74ec97102000-74ec97103000 rw-p 00003000 103:05 803442                    /usr/lib/x86_64-linux-gnu/libdl.so.2
+74ec97103000-74ec97104000 r--p 00000000 103:05 803880                    /usr/lib/x86_64-linux-gnu/libpthread.so.0
+74ec97104000-74ec97105000 r-xp 00001000 103:05 803880                    /usr/lib/x86_64-linux-gnu/libpthread.so.0
+74ec97105000-74ec97106000 r--p 00002000 103:05 803880                    /usr/lib/x86_64-linux-gnu/libpthread.so.0
+74ec97106000-74ec97107000 r--p 00002000 103:05 803880                    /usr/lib/x86_64-linux-gnu/libpthread.so.0
+74ec97107000-74ec97108000 rw-p 00003000 103:05 803880                    /usr/lib/x86_64-linux-gnu/libpthread.so.0
+74ec97108000-74ec97109000 r--p 00000000 103:05 803908                    /usr/lib/x86_64-linux-gnu/librt.so.1
+74ec97109000-74ec9710a000 r-xp 00001000 103:05 803908                    /usr/lib/x86_64-linux-gnu/librt.so.1
+74ec9710a000-74ec9710b000 r--p 00002000 103:05 803908                    /usr/lib/x86_64-linux-gnu/librt.so.1
+74ec9710b000-74ec9710c000 r--p 00002000 103:05 803908                    /usr/lib/x86_64-linux-gnu/librt.so.1
+74ec9710c000-74ec9710d000 rw-p 00003000 103:05 803908                    /usr/lib/x86_64-linux-gnu/librt.so.1
+74ec9710d000-74ec9710f000 r--p 00000000 103:05 803236                    /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+74ec9710f000-74ec97116000 r-xp 00002000 103:05 803236                    /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+74ec97116000-74ec97117000 r--p 00009000 103:05 803236                    /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+74ec97117000-74ec97118000 r--p 00009000 103:05 803236                    /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+74ec97118000-74ec97119000 rw-p 0000a000 103:05 803236                    /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+74ec97119000-74ec9711b000 r--p 00000000 103:05 803223                    /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2
+74ec9711b000-74ec97121000 r-xp 00002000 103:05 803223                    /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2
+74ec97121000-74ec97123000 r--p 00008000 103:05 803223                    /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2
+74ec97123000-74ec97124000 r--p 00009000 103:05 803223                    /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2
+74ec97124000-74ec97125000 rw-p 0000a000 103:05 803223                    /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2
+74ec97125000-74ec9712c000 r--s 00000000 103:05 805128                    /usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache
+74ec9712c000-74ec9712e000 rw-p 00000000 00:00 0 
+74ec9712e000-74ec9712f000 r--p 00000000 103:05 803188                    /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+74ec9712f000-74ec9715a000 r-xp 00001000 103:05 803188                    /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+74ec9715a000-74ec97164000 r--p 0002c000 103:05 803188                    /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+74ec97164000-74ec97166000 r--p 00036000 103:05 803188                    /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+74ec97166000-74ec97168000 rw-p 00038000 103:05 803188                    /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7ffe0b67b000-7ffe0b69d000 rw-p 00000000 00:00 0                          [stack]
+7ffe0b78e000-7ffe0b792000 r--p 00000000 00:00 0                          [vvar]
+7ffe0b792000-7ffe0b794000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 --xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+jvm_args: -DAPP_DIR=/home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18 
+java_command: processing.app.Base
+java_class_path (initial): :/home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/rt.jar:/home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/lib/tools.jar:/home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/apple.jar:/home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/arduino-core.jar:/home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/batik-1.8.jar:/home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/batik-anim-1.8.jar:/home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/batik-awt-util-1.8.jar:/home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/batik-bridge-1.8.jar:/home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/batik-codec-1.8.jar:/home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/batik-css-1.8.jar:/home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/batik-dom-1.8.jar:/home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/batik-ext-1.8.jar:/home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/batik-gvt-1.8.jar:/home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/batik-parser-1.8.jar:/home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/batik-rasterizer-1.8.jar:/home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/batik-script-1.8.jar:/home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/batik-squiggle-1.8.jar:/home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/batik-svg-dom-1.8.jar:/home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/batik-svgpp-1.8.jar:/home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/batik-transcoder-1.8.jar:/home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib/batik-util-1.8.
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_TOOL_OPTIONS=
+PATH=/home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/java/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin
+USERNAME=omnipotent-havoc
+LD_LIBRARY_PATH=/home/omnipotent-havoc/Downloads/arduino-1.8.18-linux64/arduino-1.8.18/lib
+SHELL=/usr/bin/fish
+DISPLAY=:0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0xaced60], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGBUS: [libjvm.so+0xaced60], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGFPE: [libjvm.so+0x907ca0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGPIPE: SIG_IGN, sa_mask[0]=00000000000010000000000000000000, sa_flags=SA_RESTART
+SIGXFSZ: [libjvm.so+0x907ca0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGILL: [libjvm.so+0x907ca0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGUSR1: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGUSR2: [libjvm.so+0x907b70], sa_mask[0]=00000000000000000000000000000000, sa_flags=SA_RESTART|SA_SIGINFO
+SIGHUP: [libjvm.so+0x908190], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGINT: [libjvm.so+0x908190], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGTERM: [libjvm.so+0x908190], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGQUIT: [libjvm.so+0x908190], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+
+
+---------------  S Y S T E M  ---------------
+
+OS:DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=24.04
+DISTRIB_CODENAME=noble
+DISTRIB_DESCRIPTION="Ubuntu 24.04.1 LTS"
+
+uname:Linux 6.8.0-45-generic #45-Ubuntu SMP PREEMPT_DYNAMIC Fri Aug 30 12:02:04 UTC 2024 x86_64
+libc:glibc 2.39 NPTL 2.39 
+rlimit: STACK 8192k, CORE 0k, NPROC 94675, NOFILE 1048576, AS infinity
+load average:3.89 1.50 0.71
+
+/proc/meminfo:
+MemTotal:       24308052 kB
+MemFree:        18837232 kB
+MemAvailable:   20996608 kB
+Buffers:          114700 kB
+Cached:          2914888 kB
+SwapCached:            0 kB
+Active:          3077368 kB
+Inactive:        1055372 kB
+Active(anon):    1732112 kB
+Inactive(anon):        0 kB
+Active(file):    1345256 kB
+Inactive(file):  1055372 kB
+Unevictable:      556124 kB
+Mlocked:              32 kB
+SwapTotal:      12611580 kB
+SwapFree:       12611580 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:               892 kB
+Writeback:             0 kB
+AnonPages:       1652004 kB
+Mapped:           607156 kB
+Shmem:            628952 kB
+KReclaimable:     140312 kB
+Slab:             389520 kB
+SReclaimable:     140312 kB
+SUnreclaim:       249208 kB
+KernelStack:       17960 kB
+PageTables:        35016 kB
+SecPageTables:         0 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:    24765604 kB
+Committed_AS:   12727652 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:      131052 kB
+VmallocChunk:          0 kB
+Percpu:            16640 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:         0 kB
+ShmemHugePages:   520192 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+Unaccepted:            0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:               0 kB
+DirectMap4k:     1044736 kB
+DirectMap2M:    10190848 kB
+DirectMap1G:    13631488 kB
+
+
+CPU:total 16 (initial active 16) (16 cores per cpu, 1 threads per core) family 6 model 183 stepping 1, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, tsc, tscinvbit, bmi1, bmi2, adx
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 183
+model name	: 13th Gen Intel(R) Core(TM) i5-13450HX
+stepping	: 1
+microcode	: 0x129
+cpu MHz		: 1000.000
+cache size	: 20480 KB
+physical id	: 0
+siblings	: 16
+core id		: 0
+cpu cores	: 10
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 32
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq rdpid movdiri movdir64b fsrm md_clear serialize arch_lbr ibt flush_l1d arch_capabilities
+vmx flags	: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs ept_mode_based_exec tsc_scaling usr_wait_pause
+bugs		: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi
+bogomips	: 5222.40
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 183
+model name	: 13th Gen Intel(R) Core(TM) i5-13450HX
+stepping	: 1
+microcode	: 0x129
+cpu MHz		: 1000.000
+cache size	: 20480 KB
+physical id	: 0
+siblings	: 16
+core id		: 0
+cpu cores	: 10
+apicid		: 1
+initial apicid	: 1
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 32
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq rdpid movdiri movdir64b fsrm md_clear serialize arch_lbr ibt flush_l1d arch_capabilities
+vmx flags	: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs ept_mode_based_exec tsc_scaling usr_wait_pause
+bugs		: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi
+bogomips	: 5222.40
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 2
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 183
+model name	: 13th Gen Intel(R) Core(TM) i5-13450HX
+stepping	: 1
+microcode	: 0x129
+cpu MHz		: 999.986
+cache size	: 20480 KB
+physical id	: 0
+siblings	: 16
+core id		: 4
+cpu cores	: 10
+apicid		: 8
+initial apicid	: 8
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 32
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq rdpid movdiri movdir64b fsrm md_clear serialize arch_lbr ibt flush_l1d arch_capabilities
+vmx flags	: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs ept_mode_based_exec tsc_scaling usr_wait_pause
+bugs		: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi
+bogomips	: 5222.40
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 3
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 183
+model name	: 13th Gen Intel(R) Core(TM) i5-13450HX
+stepping	: 1
+microcode	: 0x129
+cpu MHz		: 1000.000
+cache size	: 20480 KB
+physical id	: 0
+siblings	: 16
+core id		: 4
+cpu cores	: 10
+apicid		: 9
+initial apicid	: 9
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 32
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq rdpid movdiri movdir64b fsrm md_clear serialize arch_lbr ibt flush_l1d arch_capabilities
+vmx flags	: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs ept_mode_based_exec tsc_scaling usr_wait_pause
+bugs		: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi
+bogomips	: 5222.40
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 4
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 183
+model name	: 13th Gen Intel(R) Core(TM) i5-13450HX
+stepping	: 1
+microcode	: 0x129
+cpu MHz		: 1000.020
+cache size	: 20480 KB
+physical id	: 0
+siblings	: 16
+core id		: 8
+cpu cores	: 10
+apicid		: 16
+initial apicid	: 16
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 32
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq rdpid movdiri movdir64b fsrm md_clear serialize arch_lbr ibt flush_l1d arch_capabilities
+vmx flags	: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs ept_mode_based_exec tsc_scaling usr_wait_pause
+bugs		: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi
+bogomips	: 5222.40
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 5
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 183
+model name	: 13th Gen Intel(R) Core(TM) i5-13450HX
+stepping	: 1
+microcode	: 0x129
+cpu MHz		: 1001.291
+cache size	: 20480 KB
+physical id	: 0
+siblings	: 16
+core id		: 8
+cpu cores	: 10
+apicid		: 17
+initial apicid	: 17
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 32
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq rdpid movdiri movdir64b fsrm md_clear serialize arch_lbr ibt flush_l1d arch_capabilities
+vmx flags	: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs ept_mode_based_exec tsc_scaling usr_wait_pause
+bugs		: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi
+bogomips	: 5222.40
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 6
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 183
+model name	: 13th Gen Intel(R) Core(TM) i5-13450HX
+stepping	: 1
+microcode	: 0x129
+cpu MHz		: 1000.069
+cache size	: 20480 KB
+physical id	: 0
+siblings	: 16
+core id		: 12
+cpu cores	: 10
+apicid		: 24
+initial apicid	: 24
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 32
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq rdpid movdiri movdir64b fsrm md_clear serialize arch_lbr ibt flush_l1d arch_capabilities
+vmx flags	: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs ept_mode_based_exec tsc_scaling usr_wait_pause
+bugs		: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi
+bogomips	: 5222.40
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 7
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 183
+model name	: 13th Gen Intel(R) Core(TM) i5-13450HX
+stepping	: 1
+microcode	: 0x129
+cpu MHz		: 1000.019
+cache size	: 20480 KB
+physical id	: 0
+siblings	: 16
+core id		: 12
+cpu cores	: 10
+apicid		: 25
+initial apicid	: 25
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 32
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq rdpid movdiri movdir64b fsrm md_clear serialize arch_lbr ibt flush_l1d arch_capabilities
+vmx flags	: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs ept_mode_based_exec tsc_scaling usr_wait_pause
+bugs		: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi
+bogomips	: 5222.40
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 8
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 183
+model name	: 13th Gen Intel(R) Core(TM) i5-13450HX
+stepping	: 1
+microcode	: 0x129
+cpu MHz		: 992.825
+cache size	: 20480 KB
+physical id	: 0
+siblings	: 16
+core id		: 16
+cpu cores	: 10
+apicid		: 32
+initial apicid	: 32
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 32
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq rdpid movdiri movdir64b fsrm md_clear serialize arch_lbr ibt flush_l1d arch_capabilities
+vmx flags	: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs ept_mode_based_exec tsc_scaling usr_wait_pause
+bugs		: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi
+bogomips	: 5222.40
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 9
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 183
+model name	: 13th Gen Intel(R) Core(TM) i5-13450HX
+stepping	: 1
+microcode	: 0x129
+cpu MHz		: 998.293
+cache size	: 20480 KB
+physical id	: 0
+siblings	: 16
+core id		: 16
+cpu cores	: 10
+apicid		: 33
+initial apicid	: 33
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 32
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq rdpid movdiri movdir64b fsrm md_clear serialize arch_lbr ibt flush_l1d arch_capabilities
+vmx flags	: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs ept_mode_based_exec tsc_scaling usr_wait_pause
+bugs		: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi
+bogomips	: 5222.40
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 10
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 183
+model name	: 13th Gen Intel(R) Core(TM) i5-13450HX
+stepping	: 1
+microcode	: 0x129
+cpu MHz		: 999.819
+cache size	: 20480 KB
+physical id	: 0
+siblings	: 16
+core id		: 20
+cpu cores	: 10
+apicid		: 40
+initial apicid	: 40
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 32
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq rdpid movdiri movdir64b fsrm md_clear serialize arch_lbr ibt flush_l1d arch_capabilities
+vmx flags	: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs ept_mode_based_exec tsc_scaling usr_wait_pause
+bugs		: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi
+bogomips	: 5222.40
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 11
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 183
+model name	: 13th Gen Intel(R) Core(TM) i5-13450HX
+stepping	: 1
+microcode	: 0x129
+cpu MHz		: 1000.010
+cache size	: 20480 KB
+physical id	: 0
+siblings	: 16
+core id		: 20
+cpu cores	: 10
+apicid		: 41
+initial apicid	: 41
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 32
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq rdpid movdiri movdir64b fsrm md_clear serialize arch_lbr ibt flush_l1d arch_capabilities
+vmx flags	: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs ept_mode_based_exec tsc_scaling usr_wait_pause
+bugs		: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi
+bogomips	: 5222.40
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 12
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 183
+model name	: 13th Gen Intel(R) Core(TM) i5-13450HX
+stepping	: 1
+microcode	: 0x129
+cpu MHz		: 1000.190
+cache size	: 20480 KB
+physical id	: 0
+siblings	: 16
+core id		: 24
+cpu cores	: 10
+apicid		: 48
+initial apicid	: 48
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 32
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq rdpid movdiri movdir64b fsrm md_clear serialize arch_lbr ibt flush_l1d arch_capabilities
+vmx flags	: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs ept_mode_based_exec tsc_scaling usr_wait_pause
+bugs		: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi
+bogomips	: 5222.40
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 13
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 183
+model name	: 13th Gen Intel(R) Core(TM) i5-13450HX
+stepping	: 1
+microcode	: 0x129
+cpu MHz		: 1000.020
+cache size	: 20480 KB
+physical id	: 0
+siblings	: 16
+core id		: 25
+cpu cores	: 10
+apicid		: 50
+initial apicid	: 50
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 32
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq rdpid movdiri movdir64b fsrm md_clear serialize arch_lbr ibt flush_l1d arch_capabilities
+vmx flags	: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs ept_mode_based_exec tsc_scaling usr_wait_pause
+bugs		: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi
+bogomips	: 5222.40
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 14
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 183
+model name	: 13th Gen Intel(R) Core(TM) i5-13450HX
+stepping	: 1
+microcode	: 0x129
+cpu MHz		: 1000.017
+cache size	: 20480 KB
+physical id	: 0
+siblings	: 16
+core id		: 26
+cpu cores	: 10
+apicid		: 52
+initial apicid	: 52
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 32
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq rdpid movdiri movdir64b fsrm md_clear serialize arch_lbr ibt flush_l1d arch_capabilities
+vmx flags	: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs ept_mode_based_exec tsc_scaling usr_wait_pause
+bugs		: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi
+bogomips	: 5222.40
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 15
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 183
+model name	: 13th Gen Intel(R) Core(TM) i5-13450HX
+stepping	: 1
+microcode	: 0x129
+cpu MHz		: 1000.013
+cache size	: 20480 KB
+physical id	: 0
+siblings	: 16
+core id		: 27
+cpu cores	: 10
+apicid		: 54
+initial apicid	: 54
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 32
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq rdpid movdiri movdir64b fsrm md_clear serialize arch_lbr ibt flush_l1d arch_capabilities
+vmx flags	: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs ept_mode_based_exec tsc_scaling usr_wait_pause
+bugs		: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi
+bogomips	: 5222.40
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+
+
+Memory: 4k page, physical 24308052k(18867952k free), swap 12611580k(12611580k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.191-b12) for linux-amd64 JRE (1.8.0_191-b12), built on Oct  6 2018 05:43:09 by "java_re" with gcc 7.3.0
+
+time: Sun Oct 13 14:58:20 2024
+elapsed time: 2038 seconds (0d 0h 33m 58s)
+

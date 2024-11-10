@@ -1,0 +1,17 @@
+-I includes source file, -L links the definition to the header if both are used together, .
+
+cmake is selective/modular, gcc is not
+
+If a C/C++ file is to be compiled into something else,
+.so ==> Shared obj.  ; WIN_EQv ==> .dll: "Dynamic Link Libraries"
+In C/C++,
+<>: signify system directories, "": signify same directories
+
+
+du -sh binary_filename ==> size of file
+pkg-config lib_name --libs: gives -L, -l files
+objdump -D file_name: gives assembly output
+uname -a: displays system architecture info
+
+find out about ppc32
+Huogh Server Transform

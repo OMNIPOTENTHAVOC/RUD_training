@@ -1,0 +1,37 @@
+CODING
+
+Segment 1- 
+Using Graphical SLAM (Simultaneous Localization and Mapping)- highly accurate and adjusts well irrespective of the visual conditions.
+Sensors to be used- LiDAR, Camera, IMU 
+-> Integrating these together to show both visual output along with depth and object detection with LIDAR.
+-> The data will be communicated by socket communication and the necessary modules integrated with the microcontroller (Arduino Mega)
+
+# Determination for the site of soil detection
+-> Which sensors could we have included?
+    ~ Soil moisture detector
+    ~ Soil pH Detector 
+   However, we cannot incorporate this as the sensor needs to be in contact with soil (inside the soil) for it to work.
+   This is not possible at each and every location while mapping as it is not possible for the rover to test the soil without physical contact.
+
+-> What are we implementing?
+   ~ LIDAR with Camera
+     We use OpenCV Library with Python/C++ and take the data coming from the camera and LiDAR and compare the RGB/Soil appearance to determine the moisture content/suitable terrain.
+     LIDAR can also give an output which can be converted to dot maps and a visual output.
+     We choose the exact coordinates of the required soil detection site.
+     
+# Path Planning (A* Algorithm) -> (read about this if needed. geeksforgeeks gives a good explanation)
+  -> We implement the A* algorithm
+          ~ divide the map provided by SLAM into grids.
+          ~ the end goal will be the coordinates that we have detected.
+          ~ unfavourable terrains, objects blocking the path etc. will not be visited by the rover
+          ~ a set path is defined and the coordinates of which is sent to the rover
+
+Segment 2-
+The rover moves to the path accordingly. It then sends back feedback indicating that it has reached its goal. This can be implemented by incorporating a system dialog as our rover stops at the goal. Co-ordinate system can be mapped using our SLAM generated map.
+The soil is then picked up and then stored in the container. This will be done by controlling the required motor drivers along with a remote-piloted auger.
+
+Segment 3-
+Once again, path planning is implemented.
+This time the end goal is the coordinates of the base station. The rover moves and reaches the station.
+
+END

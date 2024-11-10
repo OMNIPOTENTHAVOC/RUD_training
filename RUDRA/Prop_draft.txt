@@ -1,0 +1,30 @@
+SUBJECT: Request for borrowing required equipment as mentioned below
+
+DATE: October 20th, 2024
+
+To: AYUSH DAGA,
+    Mentor,
+    Coding,
+    RUDRA
+    
+    
+Respected Sir,
+Team A formally requests the temporary use of the equipment mentioned below for use in completing the demonstration of our proposed solution to the given problem statement: "Autonomous Rover Navigation and Mapping." We believe that the equipment will be instrumental in conducting surveying, navigational and mapping field tests as a part of our proposed solution.
+
+
+DETAILS OF EQUIPMENT REQUIRED:
+1. Webcams (2, same make and model preferred)
+Duration: Oct. 20 to Nov. 03
+Purpose: required for implementing and testing stereo imaging; 
+
+
+2. MPU6050 (1)
+Duration: Oct. 20 to Nov. 03
+Purpose: required for odometric data analysis and operations based on the same.
+
+The team understands the importance of maintaining proper care and responsibility pertaining to the use of the aforementioned equipment and assures you that it will follow all the appropriate protocols for handling and return of the same. Kindly let us know if any further clarification is needed. We shall send any and all available members to discuss this request at your convenience.
+
+Thank you for your kind perusal with regards to our request.
+Sincerely,
+Team A,
+RUDRA Trainees
